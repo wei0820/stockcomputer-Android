@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">股票獲利計算機</string>
+    <string name="facebook_app_id">2032928387009597</string>
+    <string name="fb_login_protocol_scheme">fb2032928387009597</string>
+
+
 </resources>

@@ -1,6 +1,7 @@
 package com.jackpan.stockcomputer
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import com.google.android.gms.ads.AdRequest
@@ -26,7 +27,8 @@ class MainActivity : Activity() {
     fun setTitleBar(){
         titleBar.setListener { v, action, extra ->
             when(action){
-                CommonTitleBar.ACTION_LEFT_TEXT -> Toast.makeText(this,"1",Toast.LENGTH_SHORT).show()
+                CommonTitleBar.ACTION_LEFT_TEXT ->
+                    startActivity(Intent(this,MemberCenterActivity::class.java))
                 CommonTitleBar.ACTION_RIGHT_TEXT -> Toast.makeText(this,"2",Toast.LENGTH_SHORT).show()
 
             }
