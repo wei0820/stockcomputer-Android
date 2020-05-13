@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/NoTitle"
+            android:name=".MainActivity">
 
         </activity>
     </application>
