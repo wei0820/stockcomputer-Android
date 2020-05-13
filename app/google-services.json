@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "778829796218",
+    "firebase_url": "https://stockcomupter.firebaseio.com",
+    "project_id": "stockcomupter",
+    "storage_bucket": "stockcomupter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778829796218:android:cab0b6b631e89c11c47cc3",
+        "android_client_info": {
+          "package_name": "com.jackpan.stockcomputer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778829796218-kuhgj6emseta3357674n133a3070d3mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4bwW0SVq4zWFgjW5dP_4NtB5DXwKQdiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778829796218-kuhgj6emseta3357674n133a3070d3mg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "778829796218-35kd9o6tsr6k5n2aubdbucibhfnl8dkf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jackpan.stockcomputer",
+                "app_store_id": "1459476279"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
