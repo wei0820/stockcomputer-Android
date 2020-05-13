@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:titlebar="http://schemas.android.com/apk/res-auto"
@@ -24,7 +24,23 @@
         titlebar:centerType="textView"
         titlebar:rightType="textView"
         titlebar:leftType = "textView"/>
+    <RelativeLayout
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        ></RelativeLayout>
 
 
-
-</LinearLayout>
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-7019441527375550/5989432629">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
