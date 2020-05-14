@@ -10,25 +10,30 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar
+import android.R.attr.banner
+import android.R.attr.banner
+import com.lw.banner.Banner
 
 
-class MainActivity : Activity() {
-    lateinit var titleBar : CommonTitleBar
-    lateinit var mAdView : AdView
-    lateinit var MarqueeTextView :com.xiaweizi.marquee.MarqueeTextView
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        titleBar = findViewById(R.id.titlebar)
-        MarqueeTextView = findViewById(R.id.marquee1)
-        setTitleBar()
-        MobileAds.initialize(this) {}
-        mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
-        FirebaseDatebaseManager.getFirebaseDatebase(MarqueeTextView)
-     
-
+        class MainActivity : Activity() {
+            lateinit var titleBar : CommonTitleBar
+            lateinit var mAdView : AdView
+            lateinit var MarqueeTextView :com.xiaweizi.marquee.MarqueeTextView
+            lateinit var mXBanner : Banner
+            var mArray  = arrayListOf<String>()
+            override fun onCreate(savedInstanceState: Bundle?) {
+                super.onCreate(savedInstanceState)
+                setContentView(R.layout.activity_main)
+                titleBar = findViewById(R.id.titlebar)
+                mXBanner = findViewById(R.id.banner)
+                MarqueeTextView = findViewById(R.id.marquee1)
+                setTitleBar()
+                MobileAds.initialize(this) {}
+                mAdView = findViewById(R.id.adView)
+                val adRequest = AdRequest.Builder().build()
+                mAdView.loadAd(adRequest)
+                FirebaseDatebaseManager.getFirebaseDatebase(MarqueeTextView)
+                FirebaseDatebaseManager.getBannerData(mXBanner)
     }
 
     fun setTitleBar(){
@@ -43,4 +48,5 @@ class MainActivity : Activity() {
         }
 
     }
+
 }

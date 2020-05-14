@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:id="@+id/activity_main"
     android:orientation="vertical">
     <com.wuhenzhizao.titlebar.widget.CommonTitleBar
         android:id="@+id/titlebar"
@@ -24,6 +25,7 @@
         titlebar:centerType="textView"
         titlebar:rightType="textView"
         titlebar:leftType = "textView"/>
+
     <RelativeLayout
         android:layout_above="@+id/adView"
         android:layout_below="@+id/titlebar"
@@ -40,6 +42,12 @@
             app:scroll_first_delay="0"
             app:scroll_interval="8000"
             app:scroll_mode="mode_forever" />
+
+        <com.lw.banner.Banner
+            android:layout_below="@+id/marquee1"
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="160dp" />
 
 
     </RelativeLayout>
