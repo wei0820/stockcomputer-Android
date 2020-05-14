@@ -1,11 +1,6 @@
 package Manager;
 
-import android.content.Context;
-import android.graphics.Color;
-import android.net.Uri;
 import android.util.Log;
-import android.widget.ImageView;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -63,8 +58,6 @@ public class FirebaseDatebaseManager {
                         .setImageLoader(new GlideImageLoader())
                         .isAutoPlay(true)
                         .init();
-
-                // ...
             }
 
             @Override
