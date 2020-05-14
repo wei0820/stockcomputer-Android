@@ -1,5 +1,6 @@
 package com.jackpan.stockcomputer
 
+import Manager.FirebaseDatebaseManager
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +9,7 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar
+
 
 class MainActivity : Activity() {
     lateinit var titleBar : CommonTitleBar
@@ -22,6 +24,9 @@ class MainActivity : Activity() {
         mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
+        FirebaseDatebaseManager.getFirebaseDatebase()
+
+
     }
 
     fun setTitleBar(){
