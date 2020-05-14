@@ -13,7 +13,7 @@ import Data.Stockcomupter;
 public class FirebaseDatebaseManager {
     private static  DatabaseReference mDatabase;// ...
 
-    public static void getFirebaseDatebase(){
+    public static void getFirebaseDatebase(final  com.xiaweizi.marquee.MarqueeTextView textView){
         mDatabase = FirebaseDatabase.getInstance().getReference().child("stockcomuper").child("stockcomuper").child("stockcomuper");
         ValueEventListener postListener = new ValueEventListener() {
             @Override
@@ -21,6 +21,8 @@ public class FirebaseDatebaseManager {
                 // Get Post object and use the values to update the UI
                 Stockcomupter banner = dataSnapshot.getValue(Stockcomupter.class);
                 Log.d("Jack",banner.announcement);
+                textView.setText(banner.announcement);
+                textView.startScroll();
                 // ...
             }
 

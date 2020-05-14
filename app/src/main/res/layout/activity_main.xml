@@ -29,9 +29,20 @@
         android:layout_below="@+id/titlebar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        >
+        <com.xiaweizi.marquee.MarqueeTextView
+            android:id="@+id/marquee1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            app:scroll_first_delay="0"
+            app:scroll_interval="8000"
+            app:scroll_mode="mode_forever" />
 
 
-        ></RelativeLayout>
+    </RelativeLayout>
 
 
     <com.google.android.gms.ads.AdView
