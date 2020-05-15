@@ -8,6 +8,8 @@ import android.content.Intent
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.facebook.AccessToken
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
@@ -16,7 +18,6 @@ import com.facebook.login.LoginResult
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import java.util.*
-import com.google.firebase.auth.FirebaseUser
 
 
 
@@ -28,9 +29,8 @@ class MemberCenterActivity : Activity() {
     lateinit var btnLoginFacebook : Button
     var callbackManager: CallbackManager? = null
     private lateinit var auth: FirebaseAuth// ...
-
-    private val firebaseAuth: FirebaseAuth? = null
     private var firebaseAuthListener: FirebaseAuth.AuthStateListener? = null
+    lateinit var mImageView: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_center)
@@ -59,7 +59,7 @@ class MemberCenterActivity : Activity() {
                     })
         })
         auth = FirebaseAuth.getInstance()
-
+        mImageView = findViewById(R.id.image)
 
 
     }
@@ -112,12 +112,20 @@ class MemberCenterActivity : Activity() {
 
             Log.d("Jack", currentUser.displayName)
             Log.d("Jack", currentUser.uid)
+            Log.d("Jack", currentUser.photoUrl.toString())
+            Glide.with(this)
+                    .load(currentUser.photoUrl)
+                    .into(mImageView)
 
 
         }else{
             btnLoginFacebook.visibility = View.VISIBLE
 
         }
+    }
+    fun  signOut() {
+        auth.signOut()
+        LoginManager.getInstance().logOut()
     }
 
 }
