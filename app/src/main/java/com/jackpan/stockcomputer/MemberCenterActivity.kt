@@ -16,6 +16,10 @@ import com.facebook.login.LoginResult
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import java.util.*
+import com.google.firebase.auth.FirebaseUser
+import androidx.annotation.NonNull
+
+
 
 
 class MemberCenterActivity : Activity() {
@@ -23,6 +27,8 @@ class MemberCenterActivity : Activity() {
     var callbackManager: CallbackManager? = null
     private lateinit var auth: FirebaseAuth// ...
 
+    private val firebaseAuth: FirebaseAuth? = null
+    private var firebaseAuthListener: FirebaseAuth.AuthStateListener? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_center)
@@ -51,6 +57,13 @@ class MemberCenterActivity : Activity() {
                     })
         })
         auth = FirebaseAuth.getInstance()
+        firebaseAuthListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+            val user = firebaseAuth.currentUser
+            if (user != null) {
+            }
+        }
+
+
 
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
@@ -77,6 +90,21 @@ class MemberCenterActivity : Activity() {
 
                     // ...
                 }
+    }
+
+    protected override fun onStart() {
+        super.onStart()
+        firebaseAuthListener?.let { auth.addAuthStateListener(it) }
+    }
+
+    protected override fun onStop() {
+        super.onStop()
+        firebaseAuthListener?.let { auth.removeAuthStateListener(it) }
+    }
+
+
+    fun checkMemberLoginState(){
+        
     }
 
 }
