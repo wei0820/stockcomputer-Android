@@ -10,15 +10,10 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar
-import android.R.attr.banner
-import android.R.attr.banner
-import android.util.Log
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.iid.FirebaseInstanceId
 import com.lw.banner.Banner
 
 
-        class MainActivity : Activity() {
+    class MainActivity : Activity() {
             lateinit var titleBar : CommonTitleBar
             lateinit var mAdView : AdView
             lateinit var MarqueeTextView :com.xiaweizi.marquee.MarqueeTextView
@@ -38,22 +33,10 @@ import com.lw.banner.Banner
                 FirebaseDatebaseManager.getFirebaseDatebase(MarqueeTextView)
                 FirebaseDatebaseManager.getBannerData(mXBanner)
 
-
-                FirebaseInstanceId.getInstance().instanceId
-                        .addOnCompleteListener(OnCompleteListener { task ->
-                            if (!task.isSuccessful) {
-                                Log.d("Jack", "getInstanceId failed", task.exception)
-                                return@OnCompleteListener
-                            }
-
-                            // Get new Instance ID token
-                            val token = task.result?.token
-
-                            // Log and toast
-                            Log.d("Jack",  task.result?.token.toString())
-                        })
-
             }
+
+
+
 
     fun setTitleBar(){
         titleBar.setListener { v, action, extra ->

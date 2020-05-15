@@ -11,6 +11,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import Data.Banner;
+import Data.MemberData;
 import Data.Stockcomupter;
 
 public class FirebaseDatebaseManager {
@@ -57,6 +58,39 @@ public class FirebaseDatebaseManager {
                         .setImageLoader(new GlideImageLoader())
                         .isAutoPlay(true)
                         .init();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Getting Post failed, log a message
+                // ...
+            }
+        };
+        mDatabase.addValueEventListener(postListener);
+
+
+
+
+
+
+    }
+
+
+    public static void getMemberData(String id){
+        final ArrayList<String> stringArrayList=new ArrayList<>();
+
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("MemberList").child(id).child(id);
+        ValueEventListener postListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Get Post object and use the values to update the U
+                Log.d("Jack",dataSnapshot.toString());
+
+                MemberData memberData = dataSnapshot.getValue(MemberData.class);
+                Log.d("Jack",memberData.name);
+
+
+
             }
 
             @Override

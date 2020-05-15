@@ -1,5 +1,6 @@
 package com.jackpan.stockcomputer
 
+import Manager.FirebaseDatebaseManager
 import android.app.Activity
 import android.os.Bundle
 import com.facebook.CallbackManager
@@ -65,7 +66,10 @@ class MemberCenterActivity : Activity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         val user = auth.currentUser
-                        Log.d("Jack", user!!.uid)
+                        Log.d("Jack",user!!.uid )
+
+                        FirebaseDatebaseManager.getMemberData(user!!.uid)
+
 
                     } else {
                         // If sign in fails, display a message to the user.
