@@ -17,7 +17,9 @@ import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 import com.google.firebase.auth.FirebaseUser
-import androidx.annotation.NonNull
+
+
+
 
 
 
@@ -57,11 +59,6 @@ class MemberCenterActivity : Activity() {
                     })
         })
         auth = FirebaseAuth.getInstance()
-        firebaseAuthListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
-            val user = firebaseAuth.currentUser
-            if (user != null) {
-            }
-        }
 
 
 
@@ -92,6 +89,11 @@ class MemberCenterActivity : Activity() {
                 }
     }
 
+    override fun onResume() {
+        super.onResume()
+        checkMemberLoginState()
+    }
+
     protected override fun onStart() {
         super.onStart()
         firebaseAuthListener?.let { auth.addAuthStateListener(it) }
@@ -104,7 +106,18 @@ class MemberCenterActivity : Activity() {
 
 
     fun checkMemberLoginState(){
-        
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            btnLoginFacebook.visibility = View.GONE
+
+            Log.d("Jack", currentUser.displayName)
+            Log.d("Jack", currentUser.uid)
+
+
+        }else{
+            btnLoginFacebook.visibility = View.VISIBLE
+
+        }
     }
 
 }
