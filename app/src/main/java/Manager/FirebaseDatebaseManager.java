@@ -23,7 +23,6 @@ public class FirebaseDatebaseManager {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get Post object and use the values to update the UI
                 Stockcomupter banner = dataSnapshot.getValue(Stockcomupter.class);
-                Log.d("Jack",banner.announcement);
                 textView.setText(banner.announcement);
                 textView.startScroll();
                 // ...
