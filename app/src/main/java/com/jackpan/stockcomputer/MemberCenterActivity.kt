@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.facebook.AccessToken
 import com.facebook.FacebookCallback
@@ -72,7 +73,9 @@ class MemberCenterActivity : Activity() {
         mPointTextView = findViewById(R.id.pointtext)
         mLastTimeTextView = findViewById(R.id.lasttext)
         mCheckTextView = findViewById(R.id.checktext)
-
+        mPointTextView.setOnClickListener {
+            Toast.makeText(this,"用於一些需要的地方！",Toast.LENGTH_SHORT).show()
+        }
 
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
