@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.facebook.AccessToken
 import com.facebook.FacebookCallback
@@ -31,6 +32,12 @@ class MemberCenterActivity : Activity() {
     private lateinit var auth: FirebaseAuth// ...
     private var firebaseAuthListener: FirebaseAuth.AuthStateListener? = null
     lateinit var mImageView: ImageView
+
+    lateinit var mIDtext :TextView
+    lateinit var mNameTextView: TextView
+    lateinit var mPointTextView: TextView
+    lateinit var mLastTimeTextView: TextView
+    lateinit var mCheckTextView: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_center)
@@ -60,6 +67,11 @@ class MemberCenterActivity : Activity() {
         })
         auth = FirebaseAuth.getInstance()
         mImageView = findViewById(R.id.image)
+        mIDtext = findViewById(R.id.idtext)
+        mNameTextView = findViewById(R.id.nametext)
+        mPointTextView = findViewById(R.id.pointtext)
+        mLastTimeTextView = findViewById(R.id.lasttext)
+        mCheckTextView = findViewById(R.id.checktext)
 
 
     }
@@ -78,7 +90,6 @@ class MemberCenterActivity : Activity() {
                         val user = auth.currentUser
                         Log.d("Jack",user!!.uid )
 
-                        FirebaseDatebaseManager.getMemberData(user!!.uid)
 
 
                     } else {
@@ -109,10 +120,9 @@ class MemberCenterActivity : Activity() {
         val currentUser = auth.currentUser
         if (currentUser != null) {
             btnLoginFacebook.visibility = View.GONE
-
-            Log.d("Jack", currentUser.displayName)
-            Log.d("Jack", currentUser.uid)
-            Log.d("Jack", currentUser.photoUrl.toString())
+            FirebaseDatebaseManager.getMemberData(currentUser.uid,mPointTextView,mLastTimeTextView,mCheckTextView)
+            mIDtext.text =  "會員ID:" + currentUser.uid
+            mNameTextView.text = "會員姓名:" + currentUser.displayName
             Glide.with(this)
                     .load(currentUser.photoUrl)
                     .into(mImageView)

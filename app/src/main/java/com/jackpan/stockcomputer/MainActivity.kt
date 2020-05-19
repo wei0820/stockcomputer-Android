@@ -42,7 +42,7 @@ import com.lw.banner.Banner
         titleBar.setListener { v, action, extra ->
             when(action){
                 CommonTitleBar.ACTION_LEFT_TEXT ->
-                    startActivity(Intent(this,PhoneAuthActivity::class.java))
+                    startActivity(Intent(this,MemberCenterActivity::class.java))
                 CommonTitleBar.ACTION_RIGHT_TEXT -> Toast.makeText(this,"2",Toast.LENGTH_SHORT).show()
 
             }

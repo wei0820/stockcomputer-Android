@@ -20,7 +20,52 @@
 
             ></ImageView>
 
+        <TextView
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="12dp"
+            android:textSize="14dp"
+            android:id="@+id/idtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></TextView>
 
+        <TextView
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:textSize="14dp"
+            android:id="@+id/nametext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></TextView>
+        <TextView
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:textSize="14dp"
+            android:id="@+id/pointtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></TextView>
+        <TextView
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:textSize="14dp"
+            android:id="@+id/lasttext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></TextView>
+        <TextView
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:textSize="14dp"
+            android:id="@+id/checktext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></TextView>
 
     </LinearLayout>
     <Button

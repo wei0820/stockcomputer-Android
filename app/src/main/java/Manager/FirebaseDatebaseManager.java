@@ -1,6 +1,8 @@
 package Manager;
 
 import android.util.Log;
+import android.widget.TextView;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -76,7 +78,7 @@ public class FirebaseDatebaseManager {
     }
 
 
-    public static void getMemberData(String id){
+    public static void getMemberData(String id, final TextView point, final  TextView lasttime, final  TextView check){
         final ArrayList<String> stringArrayList=new ArrayList<>();
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("MemberList").child(id).child(id);
@@ -84,10 +86,11 @@ public class FirebaseDatebaseManager {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get Post object and use the values to update the U
-                Log.d("Jack",dataSnapshot.toString());
 
                 MemberData memberData = dataSnapshot.getValue(MemberData.class);
-                Log.d("Jack",memberData.name);
+                point.setText("會員點數:"+memberData.point);
+                lasttime.setText("上次登入:"+TimeManager.getDate(memberData.lastlogintime));
+                check.setText("上次看影片時間:"+ TimeManager.getDate(memberData.watchadtime));
 
 
 
