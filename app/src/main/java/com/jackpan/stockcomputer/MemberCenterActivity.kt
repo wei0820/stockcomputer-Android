@@ -127,7 +127,7 @@ class MemberCenterActivity : Activity() {
                     .load(currentUser.photoUrl)
                     .into(mImageView)
 
-
+            FirebaseDatebaseManager.updateMemberPoint(currentUser.uid)
         }else{
             btnLoginFacebook.visibility = View.VISIBLE
 

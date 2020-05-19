@@ -11,6 +11,8 @@ import com.google.firebase.database.ValueEventListener;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import Data.Banner;
 import Data.MemberData;
@@ -108,6 +110,24 @@ public class FirebaseDatebaseManager {
 
 
 
+
+    }
+
+    public static  void updateMemberPoint(String id){
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("MemberList").child(id).child(id);
+        Map<String, Object> childUpdates = new HashMap<>();
+        childUpdates.put("point",100);
+
+        mDatabase.updateChildren(childUpdates);
+
+    }
+
+    public static  void updateMemberVersion (String id){
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("MemberList").child(id).child(id);
+        Map<String, Object> childUpdates = new HashMap<>();
+        childUpdates.put("version",100);
+
+        mDatabase.updateChildren(childUpdates);
 
     }
 
