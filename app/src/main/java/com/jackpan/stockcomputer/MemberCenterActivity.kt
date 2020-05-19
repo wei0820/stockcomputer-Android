@@ -7,10 +7,7 @@ import com.facebook.CallbackManager
 import android.content.Intent
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.bumptech.glide.Glide
 import com.facebook.AccessToken
 import com.facebook.FacebookCallback
@@ -39,6 +36,7 @@ class MemberCenterActivity : Activity() {
     lateinit var mPointTextView: TextView
     lateinit var mLastTimeTextView: TextView
     lateinit var mCheckTextView: TextView
+    lateinit var mWatchImageButton: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_center)
@@ -76,6 +74,7 @@ class MemberCenterActivity : Activity() {
         mPointTextView.setOnClickListener {
             Toast.makeText(this,"用於一些需要的地方！",Toast.LENGTH_SHORT).show()
         }
+        mWatchImageButton  = findViewById(R.id.watch)
 
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
