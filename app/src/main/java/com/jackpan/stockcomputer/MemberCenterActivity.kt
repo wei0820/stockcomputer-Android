@@ -2,6 +2,8 @@ package com.jackpan.stockcomputer
 
 import Manager.FirebaseDatebaseManager
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import com.facebook.CallbackManager
 import android.content.Intent
@@ -16,6 +18,7 @@ import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import java.util.*
 
 
@@ -75,6 +78,16 @@ class MemberCenterActivity : Activity() {
             Toast.makeText(this,"用於一些需要的地方！",Toast.LENGTH_SHORT).show()
         }
         mWatchImageButton  = findViewById(R.id.watch)
+        mWatchImageButton.setOnClickListener {
+            AlertDialog.Builder(this)
+                    .setMessage("Your BMI is $bmi")
+                    .setTitle("看影片獲取")
+                    .setPositiveButton("OK", DialogInterface.OnClickListener { dialogInterface, i ->
+
+                    })
+                    .setNeutralButton("Cancel", null)
+                    .show()
+        }
 
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
@@ -91,6 +104,7 @@ class MemberCenterActivity : Activity() {
                         // Sign in success, update UI with the signed-in user's information
                         val user = auth.currentUser
                         Log.d("Jack",user!!.uid )
+                        UpdateUI(user)
 
 
 
@@ -120,6 +134,16 @@ class MemberCenterActivity : Activity() {
 
     fun checkMemberLoginState(){
         val currentUser = auth.currentUser
+        UpdateUI(currentUser)
+
+    }
+    fun  signOut() {
+        auth.signOut()
+        LoginManager.getInstance().logOut()
+    }
+
+    fun UpdateUI(currentUser :FirebaseUser?){
+
         if (currentUser != null) {
             btnLoginFacebook.visibility = View.GONE
             FirebaseDatebaseManager.getMemberData(currentUser.uid,mPointTextView,mLastTimeTextView,mCheckTextView)
@@ -134,10 +158,6 @@ class MemberCenterActivity : Activity() {
             btnLoginFacebook.visibility = View.VISIBLE
 
         }
-    }
-    fun  signOut() {
-        auth.signOut()
-        LoginManager.getInstance().logOut()
     }
 
 }
