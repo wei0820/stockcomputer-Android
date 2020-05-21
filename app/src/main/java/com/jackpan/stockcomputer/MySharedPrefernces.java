@@ -8,6 +8,10 @@ public class MySharedPrefernces {
 
     public static final String  NAME = "MySharedPrefernces";
     public static final String KEY_MEMBER_POINT= "memberpoint";
+    public static final String KEY_LASTLOGINTIME= "lastlogintime";
+    public static final String KEY_WATCHADTIME= "watchadtime";
+    
+
 
     public static void saveMemberPoint(Context context, Long ppint) {
         SharedPreferences sp = context.getSharedPreferences(NAME, Activity.MODE_PRIVATE);
