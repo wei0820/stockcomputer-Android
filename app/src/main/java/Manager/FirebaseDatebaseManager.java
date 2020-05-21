@@ -95,7 +95,6 @@ public class FirebaseDatebaseManager {
                 check.setText("上次看影片時間:"+ TimeManager.getDate(memberData.watchadtime));
 
 
-
             }
 
             @Override
@@ -117,7 +116,6 @@ public class FirebaseDatebaseManager {
         mDatabase = FirebaseDatabase.getInstance().getReference().child("MemberList").child(id).child(id);
         Map<String, Object> childUpdates = new HashMap<>();
         childUpdates.put("point",100);
-
         mDatabase.updateChildren(childUpdates);
 
     }
@@ -126,9 +124,10 @@ public class FirebaseDatebaseManager {
         mDatabase = FirebaseDatabase.getInstance().getReference().child("MemberList").child(id).child(id);
         Map<String, Object> childUpdates = new HashMap<>();
         childUpdates.put("version",100);
-
         mDatabase.updateChildren(childUpdates);
 
     }
+
+
 
 }

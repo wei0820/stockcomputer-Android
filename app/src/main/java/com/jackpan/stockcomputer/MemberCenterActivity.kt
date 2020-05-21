@@ -80,7 +80,7 @@ class MemberCenterActivity : Activity() {
         mWatchImageButton  = findViewById(R.id.watch)
         mWatchImageButton.setOnClickListener {
             AlertDialog.Builder(this)
-                    .setMessage("Your BMI is $bmi")
+                    .setMessage("Your BMI is")
                     .setTitle("看影片獲取")
                     .setPositiveButton("OK", DialogInterface.OnClickListener { dialogInterface, i ->
 
