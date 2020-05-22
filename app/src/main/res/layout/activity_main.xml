@@ -50,6 +50,10 @@
             android:layout_height="160dp" />
 
         <com.roughike.bottombar.BottomBar
+            app:bb_showShadow="true"
+            app:bb_badgesHideWhenActive="true"
+            app:bb_inActiveTabColor="#222222"
+            app:bb_activeTabColor ="#222222"
             android:id="@+id/bottomBar"
             android:layout_width="match_parent"
             android:layout_height="60dp"

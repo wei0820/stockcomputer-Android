@@ -31,8 +31,6 @@ public class MyApplication extends Application {
                         if (!task.isSuccessful()) {
                             return;
                         }
-
-                        // Get new Instance ID token
                         String token = task.getResult().getToken();
 
                         // Log and toast

@@ -2,14 +2,14 @@
 <tabs>
     <tab
         id="@+id/tab_favorites"
-        icon="@mipmap/icon"
-        title="Favorites" />
+        icon="@drawable/my_tab_icon"
+        title="當沖獲利試算" />
     <tab
         id="@+id/tab_nearby"
-        icon="@mipmap/icon"
-        title="Nearby" />
+        icon="@drawable/my_tab_icon"
+        title="期貨獲利試算" />
     <tab
         id="@+id/tab_friends"
-        icon="@mipmap/icon"
-        title="Friends" />
+        icon="@drawable/my_tab_icon"
+        title="選擇權獲利試算" />
 </tabs>
