@@ -4,6 +4,7 @@ import Manager.FirebaseDatebaseManager
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 
 import com.google.android.gms.ads.AdRequest
@@ -11,6 +12,12 @@ import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar
 import com.lw.banner.Banner
+import com.roughike.bottombar.OnTabSelectListener
+import androidx.annotation.IdRes
+
+
+
+
 
     class MainActivity : Activity() {
             lateinit var titleBar : CommonTitleBar
@@ -18,7 +25,11 @@ import com.lw.banner.Banner
             lateinit var MarqueeTextView :com.xiaweizi.marquee.MarqueeTextView
             lateinit var mXBanner : Banner
         lateinit var mBottomBar: com.roughike.bottombar.BottomBar
-            var mArray  = arrayListOf<String>()
+        val bottomBar_int_1 : Int = 2131231004
+        val bottomBar_int_2 : Int = 2131231006
+        val bottomBar_int_3 : Int = 2131231005
+
+        var mArray  = arrayListOf<String>()
             override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_main)
@@ -33,6 +44,15 @@ import com.lw.banner.Banner
                 mAdView.loadAd(adRequest)
                 FirebaseDatebaseManager.getFirebaseDatebase(MarqueeTextView)
                 FirebaseDatebaseManager.getBannerData(mXBanner)
+                mBottomBar.setOnTabSelectListener {
+                    when(it){
+                        bottomBar_int_1 -> Log.d("Jack","1")
+                        bottomBar_int_2 -> Log.d("Jack","2")
+                        bottomBar_int_3 -> Log.d("Jack","3")
+
+                    }
+
+                }
 
             }
 
