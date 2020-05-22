@@ -75,6 +75,16 @@
             android:background="@drawable/ic_videocam_black_24dp"
             ></ImageButton>
 
+        <Button
+            android:id="@+id/logoutbtn"
+            android:textSize="20dp"
+            android:text="會員登出"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            >
+        </Button>
+
     </LinearLayout>
     <Button
         android:visibility="gone"

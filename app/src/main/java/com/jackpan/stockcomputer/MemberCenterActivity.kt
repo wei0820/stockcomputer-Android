@@ -40,6 +40,7 @@ class MemberCenterActivity : Activity() {
     lateinit var mLastTimeTextView: TextView
     lateinit var mCheckTextView: TextView
     lateinit var mWatchImageButton: ImageButton
+    lateinit var mLogOutButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_center)
@@ -87,6 +88,10 @@ class MemberCenterActivity : Activity() {
                     })
                     .setNeutralButton("Cancel", null)
                     .show()
+        }
+        mLogOutButton = findViewById(R.id.logoutbtn)
+        mLogOutButton.setOnClickListener {
+            signOut()
         }
 
     }
