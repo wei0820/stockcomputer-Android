@@ -4,7 +4,6 @@
     <string name="fb_login_protocol_scheme">fb2032928387009597</string>
 
 
-
     <string name="hint_user_id">User ID</string>
     <string name="get_custom_token">Get Token</string>
     <string name="sign_in">Sign In</string>

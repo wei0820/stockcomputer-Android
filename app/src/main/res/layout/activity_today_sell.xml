@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TodaySellActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <RelativeLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <TextView
+                android:gravity="center"
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="買入成交價"
+                android:textSize="24dp"
+                ></TextView>
+            <com.libizo.CustomEditText
+                android:layout_marginTop="20dp"
+
+                android:layout_below="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="輸入成交價"
+                android:inputType="numberDecimal"
+                app:libIZO_setPrefixTextColor="#FF4081"
+                app:libIZO_clearIconTint="#8f1f15"
+                app:libIZO_setBorderColor="#8f1f15"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setClearIconVisible="true"
+                app:libIZO_setCornerRadius="4dp"
+                app:libIZO_setStrokeWidth="2dp"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <TextView
+                android:gravity="center"
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="賣出成交價"
+                android:textSize="24dp"
+                ></TextView>
+            <com.libizo.CustomEditText
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="輸入成交價"
+                android:inputType="numberDecimal"
+                app:libIZO_setPrefixTextColor="#FF4081"
+                app:libIZO_clearIconTint="#8f1f15"
+                app:libIZO_setBorderColor="#8f1f15"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setClearIconVisible="true"
+                app:libIZO_setCornerRadius="4dp"
+                app:libIZO_setStrokeWidth="2dp"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <RelativeLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <TextView
+                android:gravity="center"
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="買入成交價"
+                android:textSize="24dp"
+                ></TextView>
+            <com.libizo.CustomEditText
+                android:layout_marginTop="20dp"
+
+                android:layout_below="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="輸入成交價"
+                android:inputType="numberDecimal"
+                app:libIZO_setPrefixTextColor="#FF4081"
+                app:libIZO_clearIconTint="#8f1f15"
+                app:libIZO_setBorderColor="#8f1f15"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setClearIconVisible="true"
+                app:libIZO_setCornerRadius="4dp"
+                app:libIZO_setStrokeWidth="2dp"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <TextView
+                android:gravity="center"
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="賣出成交價"
+                android:textSize="24dp"
+                ></TextView>
+            <com.libizo.CustomEditText
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="輸入成交價"
+                android:inputType="numberDecimal"
+                app:libIZO_setPrefixTextColor="#FF4081"
+                app:libIZO_clearIconTint="#8f1f15"
+                app:libIZO_setBorderColor="#8f1f15"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setClearIconVisible="true"
+                app:libIZO_setCornerRadius="4dp"
+                app:libIZO_setStrokeWidth="2dp"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

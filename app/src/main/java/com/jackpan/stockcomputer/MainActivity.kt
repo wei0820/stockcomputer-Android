@@ -30,9 +30,7 @@ import androidx.annotation.IdRes
             lateinit var MarqueeTextView :com.xiaweizi.marquee.MarqueeTextView
             lateinit var mXBanner : Banner
         lateinit var mBottomBar: com.roughike.bottombar.BottomBar
-        val bottomBar_int_1 : Int = 2131231004
-        val bottomBar_int_2 : Int = 2131231006
-        val bottomBar_int_3 : Int = 2131231005
+
         lateinit var mLayout: RelativeLayout
         lateinit var mLayout2: RelativeLayout
         lateinit var mLayout3: RelativeLayout
@@ -74,15 +72,8 @@ import androidx.annotation.IdRes
         mXBanner = findViewById(R.id.banner)
         MarqueeTextView = findViewById(R.id.marquee1)
         mBottomBar = findViewById(R.id.bottomBar)
-        mBottomBar.setOnTabSelectListener {
-            when(it){
-                bottomBar_int_1 -> Log.d("Jack","1")
-                bottomBar_int_2 -> Log.d("Jack","2")
-                bottomBar_int_3 -> Log.d("Jack","3")
+        UIManager.SetBottomBar(mBottomBar,this)
 
-            }
-
-        }
     }
         fun setAd(){
             MobileAds.initialize(this) {}
