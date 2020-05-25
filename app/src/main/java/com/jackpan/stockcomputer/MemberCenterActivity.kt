@@ -41,6 +41,7 @@ class MemberCenterActivity : Activity() {
     lateinit var mCheckTextView: TextView
     lateinit var mWatchImageButton: ImageButton
     lateinit var mLogOutButton: Button
+    lateinit var mLayout: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_center)
@@ -93,6 +94,9 @@ class MemberCenterActivity : Activity() {
         mLogOutButton.setOnClickListener {
             signOut()
         }
+        mLayout = findViewById(R.id.isLoginLayout)
+
+
 
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
@@ -145,12 +149,16 @@ class MemberCenterActivity : Activity() {
     fun  signOut() {
         auth.signOut()
         LoginManager.getInstance().logOut()
+        mLayout.visibility = View.GONE
+        btnLoginFacebook.visibility = View.VISIBLE
+
     }
 
     fun UpdateUI(currentUser :FirebaseUser?){
 
         if (currentUser != null) {
             btnLoginFacebook.visibility = View.GONE
+            mLayout.visibility = View.VISIBLE
             FirebaseDatebaseManager.getMemberData(currentUser.uid,mPointTextView,mLastTimeTextView,mCheckTextView)
             mIDtext.text =  "會員ID:" + currentUser.uid
             mNameTextView.text = "會員姓名:" + currentUser.displayName
