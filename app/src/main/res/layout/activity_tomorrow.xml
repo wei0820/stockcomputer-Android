@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TodaySellActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <RelativeLayout
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="買入成交價"
+                    android:textSize="24dp"
+                    ></TextView>
+                <com.libizo.CustomEditText
+                    android:id="@+id/edt1"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_below="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="輸入成交價"
+                    android:inputType="numberDecimal"
+                    app:libIZO_setPrefixTextColor="#FF4081"
+                    app:libIZO_clearIconTint="#8f1f15"
+                    app:libIZO_setBorderColor="#8f1f15"
+                    app:libIZO_setBorderView="true"
+                    app:libIZO_setClearIconVisible="true"
+                    app:libIZO_setCornerRadius="4dp"
+                    app:libIZO_setStrokeWidth="2dp"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="賣出成交價"
+                    android:textSize="24dp"
+                    ></TextView>
+                <com.libizo.CustomEditText
+                    android:id="@+id/edt2"
+
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="輸入成交價"
+                    android:inputType="numberDecimal"
+                    app:libIZO_setPrefixTextColor="#FF4081"
+                    app:libIZO_clearIconTint="#8f1f15"
+                    app:libIZO_setBorderColor="#8f1f15"
+                    app:libIZO_setBorderView="true"
+                    app:libIZO_setClearIconVisible="true"
+                    app:libIZO_setCornerRadius="4dp"
+                    app:libIZO_setStrokeWidth="2dp"/>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <RelativeLayout
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="買入股數"
+                    android:textSize="24dp"
+                    ></TextView>
+                <com.libizo.CustomEditText
+                    android:id="@+id/edt3"
+
+                    android:layout_marginTop="20dp"
+
+                    android:layout_below="@+id/text3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="輸入成交股數"
+                    android:inputType="numberDecimal"
+                    app:libIZO_setPrefixTextColor="#FF4081"
+                    app:libIZO_clearIconTint="#8f1f15"
+                    app:libIZO_setBorderColor="#8f1f15"
+                    app:libIZO_setBorderView="true"
+                    app:libIZO_setClearIconVisible="true"
+                    app:libIZO_setCornerRadius="4dp"
+                    app:libIZO_setStrokeWidth="2dp"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="賣出股數"
+                    android:textSize="24dp"
+                    ></TextView>
+                <com.libizo.CustomEditText
+                    android:id="@+id/edt4"
+
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="輸入成交股數"
+                    android:inputType="numberDecimal"
+                    app:libIZO_setPrefixTextColor="#FF4081"
+                    app:libIZO_clearIconTint="#8f1f15"
+                    app:libIZO_setBorderColor="#8f1f15"
+                    app:libIZO_setBorderView="true"
+                    app:libIZO_setClearIconVisible="true"
+                    app:libIZO_setCornerRadius="4dp"
+                    app:libIZO_setStrokeWidth="2dp"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="券商折數"
+                android:textSize="24dp"
+                ></TextView>
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                ></Spinner>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="按我試算"
+                ></Button>
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="買入應付款:"
+                    ></TextView>
+                <TextView
+                    android:id="@+id/text_1"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    ></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="賣出應收款:"
+                    ></TextView>
+                <TextView
+                    android:id="@+id/text_2"
+
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    ></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="獲利:"
+                    ></TextView>
+                <TextView
+                    android:id="@+id/text_3"
+
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    ></TextView>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="獲利率:"
+                    ></TextView>
+                <TextView
+                    android:id="@+id/text_4"
+
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    ></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-7019441527375550/5989432629">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

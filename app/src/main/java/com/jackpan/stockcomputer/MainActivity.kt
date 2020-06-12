@@ -26,9 +26,9 @@ import androidx.annotation.IdRes
     {
 
         lateinit var titleBar : CommonTitleBar
-            lateinit var mAdView : AdView
-            lateinit var MarqueeTextView :com.xiaweizi.marquee.MarqueeTextView
-            lateinit var mXBanner : Banner
+        lateinit var mAdView : AdView
+        lateinit var MarqueeTextView :com.xiaweizi.marquee.MarqueeTextView
+        lateinit var mXBanner : Banner
         lateinit var mBottomBar: com.roughike.bottombar.BottomBar
 
         lateinit var mLayout: RelativeLayout
@@ -95,7 +95,8 @@ import androidx.annotation.IdRes
     }
         override fun onClick(p0: View?) {
             when(p0!!.id){
-                R.id.layout_1 ->""
+                R.id.layout_1 ->startActivity(Intent(this,TomorrowActivity::class.java
+                ))
                 R.id.layout_2 ->""
                 R.id.layout_3 ->""
                 R.id.layout_4 ->""

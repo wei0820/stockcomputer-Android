@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TodaySellActivity"></activity>
+        <activity android:name=".TomorrowActivity"></activity>
+        <activity android:name=".TodaySellActivity" />
         <activity android:name=".MemberCenterActivity" />
         <activity android:name=".LandPageActivity">
             <intent-filter>
