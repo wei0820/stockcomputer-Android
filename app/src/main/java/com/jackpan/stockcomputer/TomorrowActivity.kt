@@ -19,12 +19,19 @@ class TomorrowActivity : BaseActivity(), OnClickListener{
                     setToast("請檢查後再按計算")
 
                 }else{
+                    //取得 買入價
                     var buypriceDouble :Double = mEdt1.text.toString().toDouble()
+                    //取得 賣出價
                     var sellPirceDouble : Double = mEdt2.text.toString().toDouble()
+                    //取得 買入股數
+
                     var buyNumDouble :Double = mEdt3.text.toString().toDouble()
+                    //取得 賣出股數
+
                     var sellNumDouble :Double = mEdt4.text.toString().toDouble()
+                    //取得手續費
                     var handPrice : Double = mEditText.text.toString().toInt() * 0.01
-                    
+
 
 
 
