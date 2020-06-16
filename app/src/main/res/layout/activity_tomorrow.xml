@@ -111,7 +111,7 @@
                     android:id="@+id/text3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="買入股數"
+                    android:text="買入張數"
                     android:textSize="24dp"
                     ></TextView>
                 <com.libizo.CustomEditText
@@ -122,7 +122,7 @@
                     android:layout_below="@+id/text3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="輸入成交股數"
+                    android:hint="輸入成交張數"
                     android:inputType="numberDecimal"
                     app:libIZO_setPrefixTextColor="#FF4081"
                     app:libIZO_clearIconTint="#8f1f15"
@@ -147,7 +147,7 @@
                     android:id="@+id/text4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="賣出股數"
+                    android:text="賣出張數"
                     android:textSize="24dp"
                     ></TextView>
                 <com.libizo.CustomEditText
@@ -157,7 +157,7 @@
                     android:layout_below="@+id/text4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="輸入成交股數"
+                    android:hint="輸入成交張數"
                     android:inputType="numberDecimal"
                     app:libIZO_setPrefixTextColor="#FF4081"
                     app:libIZO_clearIconTint="#8f1f15"

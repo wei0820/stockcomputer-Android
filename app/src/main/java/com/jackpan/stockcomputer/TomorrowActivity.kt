@@ -23,14 +23,21 @@ class TomorrowActivity : BaseActivity(), OnClickListener{
                     var buypriceDouble :Double = mEdt1.text.toString().toDouble()
                     //取得 賣出價
                     var sellPirceDouble : Double = mEdt2.text.toString().toDouble()
-                    //取得 買入股數
+                    //取得 買入張數
 
                     var buyNumDouble :Double = mEdt3.text.toString().toDouble()
-                    //取得 賣出股數
+                    //取得 賣出張數
 
                     var sellNumDouble :Double = mEdt4.text.toString().toDouble()
                     //取得手續費
                     var handPrice : Double = mEditText.text.toString().toInt() * 0.01
+                    //取得 買入總價錢
+                    var buyAllPrcieDoube : Double = buypriceDouble * buyNumDouble
+                    //取得 賣出總價錢
+                    var sellAllPriceDouble :Double = sellPirceDouble * sellNumDouble
+
+
+
 
 
 
