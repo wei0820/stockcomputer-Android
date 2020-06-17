@@ -35,11 +35,16 @@ class TomorrowActivity : BaseActivity(), OnClickListener{
                     var handRate : Double =  0.001425
 
                     //取得 買入總價錢
-                    var buyAllPrcieDoube : Double = buypriceDouble * buyNumDouble
+                    var buyAllPrcieDoube : Double = (buypriceDouble * buyNumDouble) +(buypriceDouble * buyNumDouble*handPrice*handRate)
                     //取得 賣出總價錢
-                    var sellAllPriceDouble :Double = sellPirceDouble * sellNumDouble
+                    var sellAllPriceDouble :Double =( sellPirceDouble * sellNumDouble) + ( sellPirceDouble * sellNumDouble*handPrice*handRate)+
+                            ( sellPirceDouble * sellNumDouble*0.003)
 
-                    var
+
+
+                    mTextView.text = "買入應付款"+ buyAllPrcieDoube.toString()
+                    mTextView2.text = "賣出應收款"+sellAllPriceDouble.toString()
+                    
 
 
 
