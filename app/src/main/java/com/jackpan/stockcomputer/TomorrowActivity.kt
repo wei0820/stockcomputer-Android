@@ -42,9 +42,12 @@ class TomorrowActivity : BaseActivity(), OnClickListener{
 
 
 
-                    mTextView.text = "買入應付款"+ buyAllPrcieDoube.toString()
-                    mTextView2.text = "賣出應收款"+sellAllPriceDouble.toString()
-                    
+                    mTextView.text = buyAllPrcieDoube.toString()
+                    mTextView2.text =sellAllPriceDouble.toString()
+                    mTextView3.text =  (sellAllPriceDouble - buyAllPrcieDoube).toString()
+                    mTextView4.text = (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
+
+
 
 
 
