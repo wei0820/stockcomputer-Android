@@ -1,7 +1,9 @@
 package com.jackpan.stockcomputer
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
@@ -48,7 +50,7 @@ class TomorrowActivity : BaseActivity(), OnClickListener{
                     mTextView4.text = (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
 
 
-
+                    closeKeybord()
 
 
 
@@ -108,5 +110,10 @@ class TomorrowActivity : BaseActivity(), OnClickListener{
         mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
+    }
+    fun closeKeybord(){
+        val inputManager: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputManager.hideSoftInputFromWindow(currentFocus!!.windowToken, InputMethodManager.SHOW_FORCED)
+
     }
 }

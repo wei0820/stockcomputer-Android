@@ -111,7 +111,7 @@
                     android:id="@+id/text3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="買入股數"
+                    android:text="買入張數"
                     android:textSize="24dp"
                     ></TextView>
                 <com.libizo.CustomEditText
@@ -122,7 +122,7 @@
                     android:layout_below="@+id/text3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="輸入成交股數"
+                    android:hint="輸入成交張數"
                     android:inputType="numberDecimal"
                     app:libIZO_setPrefixTextColor="#FF4081"
                     app:libIZO_clearIconTint="#8f1f15"
@@ -147,7 +147,7 @@
                     android:id="@+id/text4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="賣出股數"
+                    android:text="賣出張數"
                     android:textSize="24dp"
                     ></TextView>
                 <com.libizo.CustomEditText
@@ -157,7 +157,7 @@
                     android:layout_below="@+id/text4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="輸入成交股數"
+                    android:hint="輸入成交張數"
                     android:inputType="numberDecimal"
                     app:libIZO_setPrefixTextColor="#FF4081"
                     app:libIZO_clearIconTint="#8f1f15"
@@ -185,11 +185,20 @@
                 android:text="券商折數"
                 android:textSize="24dp"
                 ></TextView>
-            <Spinner
+            <com.libizo.CustomEditText
+                android:inputType="numberDecimal"
+                app:libIZO_setPrefixTextColor="#FF4081"
+                app:libIZO_clearIconTint="#8f1f15"
+                app:libIZO_setBorderColor="#8f1f15"
+                app:libIZO_setBorderView="true"
+                app:libIZO_setClearIconVisible="true"
+                app:libIZO_setCornerRadius="4dp"
+                app:libIZO_setStrokeWidth="2dp"
+                android:hint="輸入折數(沒折扣 輸入1 免手續費輸入0)"
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
-                ></Spinner>
+                android:layout_height="60dp"
+                ></com.libizo.CustomEditText>
 
             <Button
                 android:id="@+id/button"
@@ -219,7 +228,6 @@
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
                     ></TextView>
 
             </LinearLayout>
@@ -246,7 +254,6 @@
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
                     ></TextView>
 
             </LinearLayout>
@@ -274,7 +281,6 @@
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
                     ></TextView>
 
 
@@ -302,7 +308,6 @@
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
                     ></TextView>
 
             </LinearLayout>
