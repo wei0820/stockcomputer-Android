@@ -12,6 +12,9 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.libizo.CustomEditText
+import com.tsongkha.spinnerdatepicker.SpinnerDatePickerDialogBuilder
+
+
 
 class TodaySellActivity : BaseActivity() , View.OnClickListener {
     override fun onClick(p0: View?) {
@@ -65,8 +68,7 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
 
 
             }
-            R.id.startbtn -> ""
-            R.id.endtbtn -> ""
+
 
         }
     }
@@ -82,8 +84,7 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
     lateinit var mTextView2: TextView
     lateinit var mTextView3: TextView
     lateinit var mTextView4: TextView
-    lateinit var mStartButton: Button
-    lateinit var mEndButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tomorrow)
@@ -102,8 +103,7 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
         mTextView2 = findViewById(R.id.text_2)
         mTextView3 = findViewById(R.id.text_3)
         mTextView4 = findViewById(R.id.text_4)
-        mStartButton = findViewById(R.id.startbtn)
-        mEndButton = findViewById(R.id.endtbtn)
+
 
 
 
@@ -119,5 +119,6 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
         inputManager.hideSoftInputFromWindow(currentFocus!!.windowToken, InputMethodManager.SHOW_FORCED)
 
     }
+
 }
 

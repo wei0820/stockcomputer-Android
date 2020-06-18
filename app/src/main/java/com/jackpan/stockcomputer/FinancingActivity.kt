@@ -2,6 +2,7 @@ package com.jackpan.stockcomputer
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -12,6 +13,8 @@ import com.google.android.gms.ads.MobileAds
 import com.libizo.CustomEditText
 import com.tsongkha.spinnerdatepicker.DatePicker
 import com.tsongkha.spinnerdatepicker.DatePickerDialog
+import com.tsongkha.spinnerdatepicker.SpinnerDatePickerDialogBuilder
+import java.text.SimpleDateFormat
 import java.util.*
 
 class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, View.OnClickListener {
@@ -66,14 +69,44 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
 
 
             }
+            R.id.startbtn ->
+                SpinnerDatePickerDialogBuilder()
+                    .context(this)
+                    .callback { view, year, monthOfYear, dayOfMonth ->
+                        Log.d("Jack",year.toString())
+                        Log.d("Jack",monthOfYear.toString())
+                        Log.d("Jack",dayOfMonth.toString())
+//
+                    }
+                    .spinnerTheme(R.style.DatePickerSpinner)
+                    .defaultDate(DateManager.getYear(), DateManager.getMonth(), DateManager.getDay())
+                    .build()
+                    .show()
+
+            R.id.endtbtn ->
+                SpinnerDatePickerDialogBuilder()
+                        .context(this)
+                        .callback { view, year, monthOfYear, dayOfMonth ->
+                            val calendar = GregorianCalendar(year, monthOfYear, dayOfMonth)
+
+=
+
+                        }
+                        .spinnerTheme(R.style.DatePickerSpinner)
+                        .defaultDate(DateManager.getYear(), DateManager.getMonth(), DateManager.getDay())
+                        .build()
+                        .show()
         }
+
     }
 
     override fun onDateSet(view: DatePicker?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
+        Log.d("Jack",view!!.id.toString())
         val calendar = GregorianCalendar(year, monthOfYear, dayOfMonth)
 
     }
-
+    lateinit var mStartButton: Button
+    lateinit var mEndButton: Button
     lateinit var mAdView : AdView
     lateinit var mEdt1 : CustomEditText
     lateinit var mEdt2 : CustomEditText
@@ -85,6 +118,8 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
     lateinit var mTextView2: TextView
     lateinit var mTextView3: TextView
     lateinit var mTextView4: TextView
+    var simpleDateFormat: SimpleDateFormat? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_financing)
@@ -103,6 +138,10 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
         mTextView2 = findViewById(R.id.text_2)
         mTextView3 = findViewById(R.id.text_3)
         mTextView4 = findViewById(R.id.text_4)
+        mStartButton = findViewById(R.id.startbtn)
+        mEndButton = findViewById(R.id.endtbtn)
+        mStartButton.setOnClickListener(this)
+        mEndButton.setOnClickListener(this)
 
 
 
@@ -118,4 +157,5 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
         inputManager.hideSoftInputFromWindow(currentFocus!!.windowToken, InputMethodManager.SHOW_FORCED)
 
     }
+
 }
