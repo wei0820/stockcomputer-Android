@@ -79,13 +79,6 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
     lateinit var mTextView2: TextView
     lateinit var mTextView3: TextView
     lateinit var mTextView4: TextView
-//    val discount = arrayListOf("沒折扣", "95折", "9折", "85折", "8折",
-//            "75折", "7折", "65折", "6折", "55折", "5折", "45折", "35折", "3折", "25折", "2折"
-//            , "15折", "1折"," 免手續費")
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tomorrow)

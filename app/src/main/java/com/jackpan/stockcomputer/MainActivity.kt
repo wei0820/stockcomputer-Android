@@ -15,12 +15,6 @@ import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar
 import com.lw.banner.Banner
-import com.roughike.bottombar.OnTabSelectListener
-import androidx.annotation.IdRes
-
-
-
-
 
     class MainActivity : Activity(), View.OnClickListener
     {
@@ -97,7 +91,7 @@ import androidx.annotation.IdRes
             when(p0!!.id){
                 R.id.layout_1 ->startActivity(Intent(this,TomorrowActivity::class.java
                 ))
-                R.id.layout_2 ->""
+                R.id.layout_2 ->startActivity(Intent(this,FinancingActivity::class.java))
                 R.id.layout_3 ->""
                 R.id.layout_4 ->""
                 R.id.layout_5 ->""
