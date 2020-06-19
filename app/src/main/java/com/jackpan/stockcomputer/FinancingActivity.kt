@@ -57,7 +57,7 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
                     mTextView4.text = (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
                     closeKeybord()
 
-
+                    Log.d("Jack",DateManager.dateDiff(startDate,endDate).toString())
 
 
 
@@ -73,10 +73,10 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
                 SpinnerDatePickerDialogBuilder()
                     .context(this)
                     .callback { view, year, monthOfYear, dayOfMonth ->
-                        Log.d("Jack",year.toString())
-                        Log.d("Jack",monthOfYear.toString())
-                        Log.d("Jack",dayOfMonth.toString())
-//
+                        mStartTextView.text = year.toString()+"-"+(monthOfYear+1).toString()+"-"+
+                                dayOfMonth.toString()
+                        startDate =  year.toString()+"-"+monthOfYear.toString()+"-"+
+                                dayOfMonth.toString()
                     }
                     .spinnerTheme(R.style.DatePickerSpinner)
                     .defaultDate(DateManager.getYear(), DateManager.getMonth(), DateManager.getDay())
@@ -87,9 +87,14 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
                 SpinnerDatePickerDialogBuilder()
                         .context(this)
                         .callback { view, year, monthOfYear, dayOfMonth ->
-                            val calendar = GregorianCalendar(year, monthOfYear, dayOfMonth)
 
-=
+
+                            mEndTextView.text = year.toString()+"-"+(monthOfYear+1).toString()+"-"+
+                                    dayOfMonth.toString()
+
+                            endDate = year.toString()+"-"+monthOfYear.toString()+"-"+
+                                    dayOfMonth.toString()
+
 
                         }
                         .spinnerTheme(R.style.DatePickerSpinner)
@@ -118,6 +123,10 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
     lateinit var mTextView2: TextView
     lateinit var mTextView3: TextView
     lateinit var mTextView4: TextView
+    lateinit var mStartTextView: TextView
+    lateinit var mEndTextView: TextView
+    var startDate : String = ""
+    var endDate : String = ""
     var simpleDateFormat: SimpleDateFormat? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -143,8 +152,8 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
         mStartButton.setOnClickListener(this)
         mEndButton.setOnClickListener(this)
 
-
-
+        mStartTextView = findViewById(R.id.starttext)
+        mEndTextView = findViewById(R.id.endtext)
     }
     fun setAd(){
         MobileAds.initialize(this) {}

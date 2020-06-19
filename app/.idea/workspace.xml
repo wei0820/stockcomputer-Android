@@ -26,8 +26,7 @@
       <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/TodaySellActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/TodaySellActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_financing.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_financing.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,18 +91,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/MainActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1247">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#35#517#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/TodaySellActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="387">
@@ -137,8 +124,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_financing.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="234" column="16" selection-start-line="234" selection-start-column="16" selection-end-line="234" selection-end-column="16" />
+            <state relative-caret-position="248">
+              <caret line="281" column="34" lean-forward="true" selection-start-line="281" selection-start-column="34" selection-end-line="281" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -169,8 +156,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-59">
-              <caret line="142" column="14" lean-forward="true" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
+            <state relative-caret-position="163">
+              <caret line="91" column="83" selection-start-line="91" selection-start-column="83" selection-end-line="91" selection-end-column="83" />
               <folding>
                 <element signature="e#35#423#0" expanded="true" />
               </folding>
@@ -179,10 +166,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.drawers/SpinnerDatePicker/2.0.1/6c4db04929580b794ef4464d28503e0792c96062/SpinnerDatePicker-2.0.1-sources.jar!/com/tsongkha/spinnerdatepicker/DatePickerDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/DateManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="276">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#177#178#0" expanded="true" />
@@ -265,7 +261,6 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_today_sell.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/TomorrowActivity.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/UIManager.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_financing.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/Repository.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/BaseActivity.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/jackpan/stockcomputer/ExampleUnitTest.kt" />
@@ -273,6 +268,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/MainActivity.kt" />
         <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/TodaySellActivity.kt" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_financing.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/DateManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt" />
       </list>
@@ -503,7 +499,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20529328" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20529328" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -512,7 +508,7 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="1" sideWeight="0.49928468" visible="true" weight="0.32647464" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49928468" visible="true" weight="0.32647464" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32891566" />
@@ -856,14 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_financing.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="234" column="16" selection-start-line="234" selection-start-column="16" selection-end-line="234" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -888,18 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/DateManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/PhoneAuthActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -911,10 +887,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.drawers/SpinnerDatePicker/2.0.1/6c4db04929580b794ef4464d28503e0792c96062/SpinnerDatePicker-2.0.1-sources.jar!/com/tsongkha/spinnerdatepicker/DatePickerDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_financing.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="281" column="34" lean-forward="true" selection-start-line="281" selection-start-column="34" selection-end-line="281" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/DateManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="142" column="14" lean-forward="true" selection-start-line="142" selection-start-column="14" selection-end-line="142" selection-end-column="14" />
+        <state relative-caret-position="163">
+          <caret line="91" column="83" selection-start-line="91" selection-start-column="83" selection-end-line="91" selection-end-column="83" />
           <folding>
             <element signature="e#35#423#0" expanded="true" />
           </folding>

@@ -232,14 +232,31 @@
                     android:text="開始日期"
                     android:textSize="24dp"
                     ></TextView>
-                <Button
-                    android:id="@+id/startbtn"
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="點我選擇"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    ></Button>
+                    >
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/startbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="點我選擇"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        ></Button>
+                    <TextView
+                        android:id="@+id/starttext"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="日期"
+                        ></TextView>
+
+                </LinearLayout>
                 <TextView
                     android:gravity="center"
                     android:layout_width="match_parent"
@@ -247,14 +264,30 @@
                     android:text="結束日期"
                     android:textSize="24dp"
                     ></TextView>
-                <Button
-                    android:id="@+id/endtbtn"
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="點我選擇"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    ></Button>
+                    >
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/endtbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="點我選擇"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        ></Button>
+                    <TextView
+                        android:id="@+id/endtext"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="日期"
+                        ></TextView>
+                </LinearLayout>
                 <Button
                     android:id="@+id/button"
                     android:layout_width="match_parent"
