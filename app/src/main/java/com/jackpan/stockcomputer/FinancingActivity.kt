@@ -50,6 +50,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
                             ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
 
 
+                    var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(( DateManager.dateDiff(startDate,endDate)/365))
 
                     mTextView.text = df.format( buyAllPrcieDoube - ((buypriceDouble *  buyNumDouble) *  loandMoneyDouble))
                     mTextView2.text =sellAllPriceDouble.toString()
@@ -59,6 +60,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
 
                     mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
                     mTextView5.text = df.format( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble)
+                    mTextView6.text = df.format(interest)
 
                 }
 
