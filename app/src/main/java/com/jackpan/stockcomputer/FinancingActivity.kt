@@ -12,6 +12,7 @@ import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.libizo.CustomEditText
 import com.tsongkha.spinnerdatepicker.SpinnerDatePickerDialogBuilder
+import kotlinx.android.synthetic.main.activity_financing.*
 import java.text.SimpleDateFormat
 
 class FinancingActivity : BaseActivity() , View.OnClickListener {
@@ -39,6 +40,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
                     var handPrice : Double = mEditText.text.toString().toInt() * 0.1
                     //取得手續費率
                     var handRate : Double =  0.001425
+                    var loandMoneyDouble : Double = edt.text.toString().toDouble() * 0.1
 
                     //取得 買入總價錢
                     var buyAllPrcieDoube : Double = (buypriceDouble * buyNumDouble) +(buypriceDouble * buyNumDouble*handPrice*handRate)
@@ -55,6 +57,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
                     closeKeybord()
 
                     mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
+                    mTextView5.text = ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble).toString()
 
                 }
 
@@ -110,6 +113,9 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
     lateinit var mTextView2: TextView
     lateinit var mTextView3: TextView
     lateinit var mTextView4: TextView
+    lateinit var mTextView5: TextView
+    lateinit var mTextView6: TextView
+
     lateinit var mStartTextView: TextView
     lateinit var mEndTextView: TextView
     var startDate : String = ""
@@ -136,6 +142,9 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
         mTextView2 = findViewById(R.id.text_2)
         mTextView3 = findViewById(R.id.text_3)
         mTextView4 = findViewById(R.id.text_4)
+        mTextView5 = findViewById(R.id.text_5)
+        mTextView6 = findViewById(R.id.text_6)
+
         mStartButton = findViewById(R.id.startbtn)
         mEndButton = findViewById(R.id.endtbtn)
         mStartButton.setOnClickListener(this)
