@@ -9,6 +9,7 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.libizo.CustomEditText
+import java.text.DecimalFormat
 
 class TomorrowActivity : BaseActivity(), OnClickListener{
     override fun onClick(p0: View?) {
@@ -44,10 +45,10 @@ class TomorrowActivity : BaseActivity(), OnClickListener{
 
 
 
-                    mTextView.text = buyAllPrcieDoube.toString()
-                    mTextView2.text =sellAllPriceDouble.toString()
-                    mTextView3.text =  (sellAllPriceDouble - buyAllPrcieDoube).toString()
-                    mTextView4.text = (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
+                    mTextView.text = df.format(buyAllPrcieDoube)
+                    mTextView2.text = df.format(sellAllPriceDouble)
+                    mTextView3.text = df.format( (sellAllPriceDouble - buyAllPrcieDoube))
+                    mTextView4.text = df.format((((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100)) + "%"
 
 
                     closeKeybord()
@@ -76,11 +77,7 @@ class TomorrowActivity : BaseActivity(), OnClickListener{
     lateinit var mTextView2: TextView
     lateinit var mTextView3: TextView
     lateinit var mTextView4: TextView
-//    val discount = arrayListOf("沒折扣", "95折", "9折", "85折", "8折",
-//            "75折", "7折", "65折", "6折", "55折", "5折", "45折", "35折", "3折", "25折", "2折"
-//            , "15折", "1折"," 免手續費")
-
-
+    var df = DecimalFormat("##.00")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

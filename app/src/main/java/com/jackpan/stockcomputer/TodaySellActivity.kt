@@ -13,7 +13,7 @@ import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.libizo.CustomEditText
 import com.tsongkha.spinnerdatepicker.SpinnerDatePickerDialogBuilder
-
+import java.text.DecimalFormat
 
 
 class TodaySellActivity : BaseActivity() , View.OnClickListener {
@@ -50,10 +50,10 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
 
 
 
-                    mTextView.text = buyAllPrcieDoube.toString()
-                    mTextView2.text =sellAllPriceDouble.toString()
-                    mTextView3.text =  (sellAllPriceDouble - buyAllPrcieDoube).toString()
-                    mTextView4.text = (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
+                    mTextView.text = df.format(buyAllPrcieDoube)
+                    mTextView2.text =df.format(sellAllPriceDouble)
+                    mTextView3.text = df.format( (sellAllPriceDouble - buyAllPrcieDoube))
+                    mTextView4.text =df.format( (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100)) + "%"
                     closeKeybord()
 
 
@@ -84,6 +84,8 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
     lateinit var mTextView2: TextView
     lateinit var mTextView3: TextView
     lateinit var mTextView4: TextView
+    var df = DecimalFormat("##.00")
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

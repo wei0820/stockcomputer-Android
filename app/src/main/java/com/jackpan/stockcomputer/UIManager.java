@@ -2,8 +2,12 @@ package com.jackpan.stockcomputer;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.widget.TextView;
+
 import com.roughike.bottombar.OnTabReselectListener;
 import com.tsongkha.spinnerdatepicker.SpinnerDatePickerDialogBuilder;
+
+import java.text.DecimalFormat;
 
 public class UIManager {
 
@@ -26,6 +30,14 @@ public class UIManager {
 
 
         });
+    }
+
+    public  static  void setDecimalTextView(TextView textView,String s){
+        DecimalFormat df = new DecimalFormat("##.00");
+        textView.setText(df.format(s));
+
+
+
     }
 
 

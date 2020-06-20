@@ -13,6 +13,7 @@ import com.google.android.gms.ads.MobileAds
 import com.libizo.CustomEditText
 import com.tsongkha.spinnerdatepicker.SpinnerDatePickerDialogBuilder
 import kotlinx.android.synthetic.main.activity_financing.*
+import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 
 class FinancingActivity : BaseActivity() , View.OnClickListener {
@@ -57,7 +58,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
                     closeKeybord()
 
                     mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
-                    mTextView5.text = ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble).toString()
+                    mTextView5.text = df.format( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble).toString()
 
                 }
 
@@ -123,6 +124,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
     lateinit var mDateTextView: TextView
     lateinit var mloandMoney :CustomEditText
     var simpleDateFormat: SimpleDateFormat? = null
+    var df = DecimalFormat("##.00")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
