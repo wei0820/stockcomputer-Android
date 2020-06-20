@@ -7,6 +7,7 @@
     tools:context=".TodaySellActivity"
     android:orientation="vertical">
     <ScrollView
+        android:layout_above="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
@@ -220,7 +221,7 @@
                     app:libIZO_setClearIconVisible="true"
                     app:libIZO_setCornerRadius="4dp"
                     app:libIZO_setStrokeWidth="2dp"
-                    android:hint="輸入折數(沒折扣 輸入1 免手續費輸入0)"
+                    android:hint="輸入成數(6成輸入 6)"
                     android:id="@+id/edt"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
@@ -303,7 +304,56 @@
                     android:layout_height="54dp"
                     android:text="按我試算"
                     ></Button>
+                <LinearLayout
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="融資金:"
+                        ></TextView>
+                    <TextView
+                        android:id="@+id/text_5"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        ></TextView>
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="利息:"
+                        ></TextView>
+                    <TextView
+                        android:id="@+id/text_6"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        ></TextView>
+
+                </LinearLayout>
                 <LinearLayout
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"

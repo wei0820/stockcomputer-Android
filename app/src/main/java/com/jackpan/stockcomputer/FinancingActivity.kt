@@ -20,7 +20,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
             R.id.button ->{
                 if(mEdt1.text!!.isEmpty() || mEdt2.text!!.isEmpty()||
                         mEdt3.text!!.isEmpty()||mEdt4.text!!.isEmpty()
-                        || mEditText.text!!.isEmpty()){
+                        || mEditText.text!!.isEmpty()||mloandMoney.text!!.isEmpty()){
 
                     setToast("請檢查後再按計算")
 
@@ -115,6 +115,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
     var startDate : String = ""
     var endDate : String = ""
     lateinit var mDateTextView: TextView
+    lateinit var mloandMoney :CustomEditText
     var simpleDateFormat: SimpleDateFormat? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -143,6 +144,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
         mStartTextView = findViewById(R.id.starttext)
         mEndTextView = findViewById(R.id.endtext)
         mDateTextView = findViewById(R.id.datetext)
+        mloandMoney = findViewById(R.id.edt)
     }
     fun setAd(){
         MobileAds.initialize(this) {}
