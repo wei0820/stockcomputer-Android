@@ -288,12 +288,22 @@
                         android:text="日期"
                         ></TextView>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/datetext"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="24dp"
+                    ></TextView>
                 <Button
                     android:id="@+id/button"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
                     android:text="按我試算"
                     ></Button>
+
                 <LinearLayout
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"

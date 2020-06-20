@@ -11,13 +11,10 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.libizo.CustomEditText
-import com.tsongkha.spinnerdatepicker.DatePicker
-import com.tsongkha.spinnerdatepicker.DatePickerDialog
 import com.tsongkha.spinnerdatepicker.SpinnerDatePickerDialogBuilder
 import java.text.SimpleDateFormat
-import java.util.*
 
-class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, View.OnClickListener {
+class FinancingActivity : BaseActivity() , View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0!!.id){
             R.id.button ->{
@@ -57,13 +54,7 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
                     mTextView4.text = (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
                     closeKeybord()
 
-                    Log.d("Jack",DateManager.dateDiff(startDate,endDate).toString())
-
-
-
-
-
-
+                    mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
 
                 }
 
@@ -105,11 +96,7 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
 
     }
 
-    override fun onDateSet(view: DatePicker?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
-        Log.d("Jack",view!!.id.toString())
-        val calendar = GregorianCalendar(year, monthOfYear, dayOfMonth)
 
-    }
     lateinit var mStartButton: Button
     lateinit var mEndButton: Button
     lateinit var mAdView : AdView
@@ -127,6 +114,7 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
     lateinit var mEndTextView: TextView
     var startDate : String = ""
     var endDate : String = ""
+    lateinit var mDateTextView: TextView
     var simpleDateFormat: SimpleDateFormat? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -154,6 +142,7 @@ class FinancingActivity : BaseActivity() , DatePickerDialog.OnDateSetListener, V
 
         mStartTextView = findViewById(R.id.starttext)
         mEndTextView = findViewById(R.id.endtext)
+        mDateTextView = findViewById(R.id.datetext)
     }
     fun setAd(){
         MobileAds.initialize(this) {}
