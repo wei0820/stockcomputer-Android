@@ -89,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/TodaySellActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
@@ -157,8 +157,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163">
-              <caret line="46" column="40" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="40" />
+            <state relative-caret-position="175">
+              <caret line="59" column="138" selection-start-line="59" selection-start-column="138" selection-end-line="59" selection-end-column="138" />
               <folding>
                 <element signature="e#35#515#0" expanded="true" />
               </folding>
@@ -904,7 +904,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/TodaySellActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
@@ -924,8 +924,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="40" />
+        <state relative-caret-position="175">
+          <caret line="59" column="138" selection-start-line="59" selection-start-column="138" selection-end-line="59" selection-end-column="138" />
           <folding>
             <element signature="e#35#515#0" expanded="true" />
           </folding>

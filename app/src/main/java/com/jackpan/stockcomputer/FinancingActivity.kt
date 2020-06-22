@@ -55,7 +55,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
                     var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(day)
 
                     mTextView.text = df.format( (buyAllPrcieDoube - ((buypriceDouble *  buyNumDouble) *  loandMoneyDouble)))
-                    mTextView2.text =sellAllPriceDouble.toString()
+                    mTextView2.text = (sellAllPriceDouble - interest).toString()
                     mTextView3.text =  (sellAllPriceDouble - buyAllPrcieDoube).toString()
                     mTextView4.text = (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
                     closeKeybord()
