@@ -20,10 +20,6 @@
       <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt" afterDir="false" />
     </list>
@@ -161,8 +157,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="54" column="99" lean-forward="true" selection-start-line="54" selection-start-column="99" selection-end-line="54" selection-end-column="99" />
+            <state relative-caret-position="-163">
+              <caret line="46" column="40" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="40" />
               <folding>
                 <element signature="e#35#515#0" expanded="true" />
               </folding>
@@ -928,8 +924,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jackpan/stockcomputer/FinancingActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="54" column="99" lean-forward="true" selection-start-line="54" selection-start-column="99" selection-end-line="54" selection-end-column="99" />
+        <state relative-caret-position="-163">
+          <caret line="46" column="40" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="40" />
           <folding>
             <element signature="e#35#515#0" expanded="true" />
           </folding>
