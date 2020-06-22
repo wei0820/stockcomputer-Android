@@ -49,8 +49,10 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
                     var sellAllPriceDouble :Double =( sellPirceDouble * sellNumDouble) + ( sellPirceDouble * sellNumDouble*handPrice*handRate)+
                             ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
 
+                    var day : Double = (DateManager.dateDiff(startDate,endDate)/365.00)
 
-                    var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(( DateManager.dateDiff(startDate,endDate)/365))
+
+                    var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(day)
 
                     mTextView.text = df.format( buyAllPrcieDoube - ((buypriceDouble *  buyNumDouble) *  loandMoneyDouble))
                     mTextView2.text =sellAllPriceDouble.toString()
@@ -60,6 +62,10 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
 
                     mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
                     mTextView5.text = df.format( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble)
+
+                    Log.d("Jack",day.toString())
+
+
                     mTextView6.text = df.format(interest)
 
                 }
@@ -124,6 +130,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
     var startDate : String = ""
     var endDate : String = ""
     lateinit var mDateTextView: TextView
+    lateinit var datetextmDateTextView: TextView
     lateinit var mloandMoney :CustomEditText
     var simpleDateFormat: SimpleDateFormat? = null
     var df = DecimalFormat("##.00")
