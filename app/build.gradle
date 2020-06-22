@@ -53,7 +53,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:20.1.7'
     implementation 'android.arch.work:work-runtime:1.0.1'
     implementation 'com.libizo:customedittext:1.0.6'
-    compile 'com.github.drawers:SpinnerDatePicker:2.0.1'
+    implementation 'com.github.drawers:SpinnerDatePicker:2.0.1'
 
 
 }
