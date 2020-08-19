@@ -92,7 +92,7 @@ import com.lw.banner.Banner
                 R.id.layout_1 ->startActivity(Intent(this,TomorrowActivity::class.java
                 ))
                 R.id.layout_2 ->startActivity(Intent(this,FinancingActivity::class.java))
-                R.id.layout_3 ->""
+                R.id.layout_3 ->startActivity(Intent(this,MarginTradingActivity::class.java))
                 R.id.layout_4 ->""
                 R.id.layout_5 ->""
                 R.id.layout_6 ->""

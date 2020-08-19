@@ -2,7 +2,6 @@ package com.jackpan.stockcomputer
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -14,7 +13,6 @@ import com.libizo.CustomEditText
 import com.tsongkha.spinnerdatepicker.SpinnerDatePickerDialogBuilder
 import kotlinx.android.synthetic.main.activity_financing.*
 import java.text.DecimalFormat
-import java.text.SimpleDateFormat
 
 class FinancingActivity : BaseActivity() , View.OnClickListener {
     override fun onClick(p0: View?) {
@@ -129,9 +127,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
     var startDate : String = ""
     var endDate : String = ""
     lateinit var mDateTextView: TextView
-    lateinit var datetextmDateTextView: TextView
     lateinit var mloandMoney :CustomEditText
-    var simpleDateFormat: SimpleDateFormat? = null
     var df = DecimalFormat("##.00")
 
     override fun onCreate(savedInstanceState: Bundle?) {
