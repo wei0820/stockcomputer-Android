@@ -54,7 +54,7 @@ dependencies {
     implementation 'android.arch.work:work-runtime:1.0.1'
     implementation 'com.libizo:customedittext:1.0.6'
     implementation 'com.github.drawers:SpinnerDatePicker:2.0.1'
-    compile 'org.jsoup:jsoup:1.13.1'
+    implementation 'org.jsoup:jsoup:1.13.1'
 
 
 }

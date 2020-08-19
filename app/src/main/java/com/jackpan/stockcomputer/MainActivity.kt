@@ -15,8 +15,11 @@ import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar
 import com.lw.banner.Banner
+import org.jsoup.Jsoup
+import java.io.IOException
 
-    class MainActivity : Activity(), View.OnClickListener
+
+class MainActivity : Activity(), View.OnClickListener
     {
 
         lateinit var titleBar : CommonTitleBar
@@ -42,7 +45,7 @@ import com.lw.banner.Banner
                 setAd()
                 FirebaseDatebaseManager.getFirebaseDatebase(MarqueeTextView)
                 FirebaseDatebaseManager.getBannerData(mXBanner)
-
+                getbuy()
 
             }
 
@@ -95,12 +98,33 @@ import com.lw.banner.Banner
                 R.id.layout_3 ->startActivity(Intent(this,MarginTradingActivity::class.java))
                 R.id.layout_4 ->""
                 R.id.layout_5 ->""
-                R.id.layout_6 ->""
+                R.id.layout_6 ->startActivity(Intent(this,SelectPageActivity::class.java))
 
             }
 
 
         }
+        private fun getbuy() {
+            object : Thread() {
+                override fun run() {
+                    super.run()
+                    try {
+                        val doc = Jsoup.connect("https://histock.tw/stock/three.aspx").get()
+                        for (element in doc.select("div.grid-item>div.grid-body.p5>table.gvTB>tbody")) {
+                            for (td in element.select("tr").get(1).select("td")) {
 
+                                Log.d("Jack",td.text()
+                                )
+                            }
+
+                        }
+
+                    } catch (e: IOException) {
+                        e.printStackTrace()
+                    }
+
+                }
+            }.start()
+        }
 
     }
