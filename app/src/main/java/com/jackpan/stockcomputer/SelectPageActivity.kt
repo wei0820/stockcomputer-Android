@@ -1,5 +1,6 @@
 package com.jackpan.stockcomputer
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
 import com.google.android.gms.ads.AdRequest
@@ -33,7 +34,10 @@ class SelectPageActivity : BaseActivity() {
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayList)
         mListview!!.setAdapter(adapter);
         mListview!!.setOnItemClickListener { adapterView, view, i, l ->
-            
+            when(i){
+                0 -> startActivity(Intent(this,ThreeActivity::class.java))
+            }
+
 
         }
 

@@ -45,7 +45,6 @@ class MainActivity : Activity(), View.OnClickListener
                 setAd()
                 FirebaseDatebaseManager.getFirebaseDatebase(MarqueeTextView)
                 FirebaseDatebaseManager.getBannerData(mXBanner)
-                getbuy()
 
             }
 
@@ -104,27 +103,6 @@ class MainActivity : Activity(), View.OnClickListener
 
 
         }
-        private fun getbuy() {
-            object : Thread() {
-                override fun run() {
-                    super.run()
-                    try {
-                        val doc = Jsoup.connect("https://histock.tw/stock/three.aspx").get()
-                        for (element in doc.select("div.grid-item>div.grid-body.p5>table.gvTB>tbody")) {
-                            for (td in element.select("tr").get(1).select("td")) {
 
-                                Log.d("Jack",td.text()
-                                )
-                            }
-
-                        }
-
-                    } catch (e: IOException) {
-                        e.printStackTrace()
-                    }
-
-                }
-            }.start()
-        }
 
     }
