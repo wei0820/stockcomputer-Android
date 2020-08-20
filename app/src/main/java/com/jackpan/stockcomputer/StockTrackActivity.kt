@@ -1,6 +1,7 @@
 package com.jackpan.stockcomputer
 
 import Data.StockData
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -28,11 +29,17 @@ class StockTrackActivity : BaseActivity() {
     var arrayList:ArrayList<StockData> = ArrayList()
     var mAdapter: MyAdapter? = null
     var split : List<String>? = null
+    lateinit var mProgressDialog : ProgressDialog
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stock_track)
         setAd()
+        mProgressDialog = ProgressDialog(this)
 
+        mProgressDialog.setMessage("讀取中")
+        mProgressDialog.setCancelable(false)
+        mProgressDialog.show()
 
 
         mListview = findViewById(R.id.listview)
@@ -42,6 +49,11 @@ class StockTrackActivity : BaseActivity() {
 
 
         mListview!!.setOnItemClickListener { adapterView, view, i, l ->
+            var intent = Intent()
+            intent.setClass(this,StockTrackDetailActivity::class.java)
+            intent.putExtra("detail",mAdapter!!.mDatas!!.get(i).date.split(" ")[1])
+            startActivity(intent)
+
 
 
         }
@@ -63,20 +75,20 @@ class StockTrackActivity : BaseActivity() {
                         for (td in element.select("tr")) {
                             var stockData = StockData()
 
-                            Log.d("Jack",td.text())
                             stockData.setDate(td.text())
-//                            stockData.setDate(split!![1])
                             arrayList.add(stockData)
 
                         }
 
-                        Log.d("Jack",arrayList.size.toString())
                         arrayList.removeAt(0)
                         runOnUiThread {
                             mAdapter = MyAdapter(arrayList)
 
                             mListview!!.adapter = mAdapter
                             mAdapter!!.notifyDataSetChanged()
+
+                            mProgressDialog.dismiss()
+
                         }
 
 
@@ -90,7 +102,8 @@ class StockTrackActivity : BaseActivity() {
         }.start()
     }
 
-    inner class MyAdapter(private var mDatas: ArrayList<StockData>?) : BaseAdapter() {
+    inner class MyAdapter(var mDatas: ArrayList<StockData>?) : BaseAdapter() {
+
         fun updateData(datas: ArrayList<StockData>) {
             mDatas = datas
             notifyDataSetChanged()
@@ -125,3 +138,4 @@ class StockTrackActivity : BaseActivity() {
 
     }
 }
+
