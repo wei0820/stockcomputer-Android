@@ -4,9 +4,7 @@ import Manager.FirebaseDatebaseManager
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.Toast
 
@@ -15,8 +13,6 @@ import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar
 import com.lw.banner.Banner
-import org.jsoup.Jsoup
-import java.io.IOException
 
 
 class MainActivity : Activity(), View.OnClickListener
@@ -96,7 +92,7 @@ class MainActivity : Activity(), View.OnClickListener
                 R.id.layout_2 ->startActivity(Intent(this,FinancingActivity::class.java))
                 R.id.layout_3 ->startActivity(Intent(this,MarginTradingActivity::class.java))
                 R.id.layout_4 ->""
-                R.id.layout_5 ->""
+                R.id.layout_5 ->startActivity(Intent(this,StockTrackActivity::class.java))
                 R.id.layout_6 ->startActivity(Intent(this,SelectPageActivity::class.java))
 
             }

@@ -1,7 +1,9 @@
 package com.jackpan.stockcomputer
 
+import Data.StockData
 import android.app.ProgressDialog
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import org.jsoup.Jsoup
 import java.io.IOException
@@ -91,4 +93,8 @@ class ThreeActivity : BaseActivity() {
             }
         }.start()
     }
+
+
+
+
 }
