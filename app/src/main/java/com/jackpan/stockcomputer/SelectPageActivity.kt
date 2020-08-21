@@ -36,6 +36,9 @@ class SelectPageActivity : BaseActivity() {
         mListview!!.setOnItemClickListener { adapterView, view, i, l ->
             when(i){
                 0 -> startActivity(Intent(this,ThreeActivity::class.java))
+                1 -> startActivity(Intent(this,ForeignInvestorActivity::class.java))
+
+
             }
 
 

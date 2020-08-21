@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_foreign_buy"
+        icon="@drawable/my_tab_icon"
+        title="買超" />
+    <tab
+        id="@+id/tab_foreign_sell"
+        icon="@drawable/my_tab_icon"
+        title="賣超" />
+</tabs>
