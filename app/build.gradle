@@ -56,8 +56,7 @@ dependencies {
     implementation 'com.github.drawers:SpinnerDatePicker:2.0.1'
     implementation 'org.jsoup:jsoup:1.13.1'
     implementation 'com.instabug.library:instabug:9.1.6'
-    compile 'com.github.felixsoares:BottomNavygation:1.8.6'
-
+    implementation 'com.github.felixsoares:BottomNavygation:1.8.6'
 
 
 }

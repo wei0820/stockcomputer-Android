@@ -37,6 +37,8 @@ class SelectPageActivity : BaseActivity() {
             when(i){
                 0 -> startActivity(Intent(this,ThreeActivity::class.java))
                 1 -> startActivity(Intent(this,ForeignInvestorActivity::class.java))
+                2 -> startActivity(Intent(this,TrustActivity::class.java))
+
 
 
             }

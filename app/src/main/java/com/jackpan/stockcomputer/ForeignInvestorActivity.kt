@@ -1,6 +1,4 @@
 package com.jackpan.stockcomputer
-
-import Data.StockData
 import android.app.ProgressDialog
 import android.os.Bundle
 import android.util.Log
