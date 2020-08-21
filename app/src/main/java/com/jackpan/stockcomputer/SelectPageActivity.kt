@@ -38,6 +38,7 @@ class SelectPageActivity : BaseActivity() {
                 0 -> startActivity(Intent(this,ThreeActivity::class.java))
                 1 -> startActivity(Intent(this,ForeignInvestorActivity::class.java))
                 2 -> startActivity(Intent(this,TrustActivity::class.java))
+                3 -> startActivity(Intent(this,DealerActivity::class.java))
 
 
 

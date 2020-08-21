@@ -2,7 +2,6 @@ package com.jackpan.stockcomputer
 
 import android.app.ProgressDialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -112,7 +111,6 @@ class TrustActivity : BaseActivity() {
                     for (element in doc.select("div.tb-outline.outline2>ul.stock-list>li")) {
                         for (td in element.select("span.w58.name")) {
                             if(!td.text().isEmpty()){
-                                Log.d("Jack",td.text())
                                 arrayList.add(td.text())
                             }
                             runOnUiThread {
