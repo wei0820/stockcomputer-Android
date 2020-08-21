@@ -23,7 +23,6 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="第一行文字"
                 android:textColor="#0000CC"
                 android:textSize="20dp" />
 
@@ -35,7 +34,6 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="第二行文字"
                 android:textColor="#FF0000"
                 android:textSize="16dp" />
 
