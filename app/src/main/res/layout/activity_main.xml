@@ -17,8 +17,6 @@
         titlebar:fillStatusBar="true"
         titlebar:centerText="股票獲利計算機"
         titlebar:centerTextColor="#000000"
-        titlebar:rightText="簽到"
-        titlebar:leftText="會員中心"
         titlebar:statusBarMode="dark"
         titlebar:centerTextSize="14dp"
         titlebar:titleBarHeight="60dp"
