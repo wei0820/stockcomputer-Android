@@ -2,6 +2,7 @@ package com.jackpan.stockcomputer
 
 import android.app.ProgressDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,7 +29,7 @@ class BrokerActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_broker)
         initLayout()
-        getTrustBuy()
+        getBrokerBuy()
     }
     fun initLayout(){
         MobileAds.initialize(this) {}
@@ -43,9 +44,9 @@ class BrokerActivity : BaseActivity() {
         var listener = object : BottomNav.OnTabSelectedListener {
             override fun onTabSelected(position: Int) {
                 when(position){
-                    0 -> getTrustBuy()
+                    0 -> getBrokerBuy()
 
-                    1 -> getTrustSell()
+                    1 -> getBrokerSell()
                 }
             }
 
@@ -56,7 +57,7 @@ class BrokerActivity : BaseActivity() {
         mListview = findViewById(R.id.listview)
 
     }
-    private fun getTrustBuy() {
+    private fun getBrokerBuy() {
         mProgressDialog = ProgressDialog(this)
 
         mProgressDialog.setMessage("讀取中")
@@ -67,14 +68,24 @@ class BrokerActivity : BaseActivity() {
             override fun run() {
                 super.run()
                 try {
-                    val doc = Jsoup.connect("https://histock.tw/stock/three.aspx?s=b").get()
-                    for (element in doc.select("div.tb-outline.outline1>ul.stock-list>li")) {
-                        for (td in element.select("span.w58.name")) {
-                            if(!td.text().isEmpty()){
-                                arrayList.add(td.text())
+                    val doc = Jsoup.connect("https://histock.tw/stock/broker8.aspx").get()
 
-                            }
+                    for (element in doc.select("div.grid-body.p7.mb10")) {
+                        for (x in 0..29){
+
+                           var td =  doc.select("div.grid-body.p7.mb10").get(0).select("ul.stock-list>li>span.w100.name").get(x).text()
+
+
+
+
                             runOnUiThread {
+                                if(!td.isEmpty()){
+                                    if(arrayList.size<=29){
+                                        arrayList.add(td)
+
+                                    }
+
+                                }
                                 mAdapter = MyAdapter(arrayList)
 
                                 mListview!!.adapter = mAdapter
@@ -96,7 +107,7 @@ class BrokerActivity : BaseActivity() {
             }
         }.start()
     }
-    private fun getTrustSell() {
+    private fun getBrokerSell() {
         mProgressDialog = ProgressDialog(this)
 
         mProgressDialog.setMessage("讀取中")
@@ -108,13 +119,24 @@ class BrokerActivity : BaseActivity() {
             override fun run() {
                 super.run()
                 try {
-                    val doc = Jsoup.connect("https://histock.tw/stock/three.aspx?s=b").get()
-                    for (element in doc.select("div.tb-outline.outline2>ul.stock-list>li")) {
-                        for (td in element.select("span.w58.name")) {
-                            if(!td.text().isEmpty()){
-                                arrayList.add(td.text())
-                            }
+                    val doc = Jsoup.connect("https://histock.tw/stock/broker8.aspx").get()
+                    for (element in doc.select("div.grid-body.p7.mb10")) {
+
+                        for (x in 0..29){
+
+                            var td =  doc.select("div.grid-body.p7.mb10").get(1).select("ul.stock-list>li>span.w100.name").get(x).text()
+
+
+
                             runOnUiThread {
+                                if(!td.isEmpty()){
+                                    if(arrayList.size<=29){
+                                        arrayList.add(td)
+
+
+                                    }
+
+                                }
 
                                 mAdapter = MyAdapter(arrayList)
                                 mListview!!.adapter = mAdapter
@@ -173,4 +195,4 @@ class BrokerActivity : BaseActivity() {
     }
 }
 
-}
+

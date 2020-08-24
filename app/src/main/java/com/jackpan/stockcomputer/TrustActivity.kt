@@ -69,11 +69,12 @@ class TrustActivity : BaseActivity() {
                     val doc = Jsoup.connect("https://histock.tw/stock/three.aspx?s=b").get()
                     for (element in doc.select("div.tb-outline.outline1>ul.stock-list>li")) {
                         for (td in element.select("span.w58.name")) {
-                            if(!td.text().isEmpty()){
-                                arrayList.add(td.text())
 
-                            }
                             runOnUiThread {
+                                if(!td.text().isEmpty()){
+                                    arrayList.add(td.text())
+
+                                }
                                 mAdapter = MyAdapter(arrayList)
 
                                 mListview!!.adapter = mAdapter
@@ -110,10 +111,11 @@ class TrustActivity : BaseActivity() {
                     val doc = Jsoup.connect("https://histock.tw/stock/three.aspx?s=b").get()
                     for (element in doc.select("div.tb-outline.outline2>ul.stock-list>li")) {
                         for (td in element.select("span.w58.name")) {
-                            if(!td.text().isEmpty()){
-                                arrayList.add(td.text())
-                            }
+
                             runOnUiThread {
+                                if(!td.text().isEmpty()){
+                                    arrayList.add(td.text())
+                                }
 
                                 mAdapter = MyAdapter(arrayList)
                                 mListview!!.adapter = mAdapter
