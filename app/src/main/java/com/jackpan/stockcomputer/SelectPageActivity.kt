@@ -40,6 +40,7 @@ class SelectPageActivity : BaseActivity() {
                 2 -> startActivity(Intent(this,TrustActivity::class.java))
                 3 -> startActivity(Intent(this,DealerActivity::class.java))
                 4 -> startActivity(Intent(this,BrokerActivity::class.java))
+                5 -> startActivity(Intent(this,IncreaseorDecreaseActivity::class.java))
 
 
 
