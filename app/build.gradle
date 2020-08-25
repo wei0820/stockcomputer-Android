@@ -10,10 +10,10 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.jackpan.stockcomputer"
-        minSdkVersion 23
+        minSdkVersion 28
         targetSdkVersion 29
-        versionCode 65
-        versionName "6.5"
+        versionCode 66
+        versionName "6.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
