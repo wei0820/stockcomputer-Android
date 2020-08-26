@@ -194,7 +194,7 @@
                 app:libIZO_setClearIconVisible="true"
                 app:libIZO_setCornerRadius="4dp"
                 app:libIZO_setStrokeWidth="2dp"
-                android:hint="輸入折數(沒折扣 輸入1 免手續費輸入0)"
+                android:hint="輸入折數(6折 0.6 沒折扣 輸入1 免手續費輸入0)"
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"

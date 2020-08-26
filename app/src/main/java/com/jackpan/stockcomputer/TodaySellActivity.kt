@@ -38,14 +38,14 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
 
                     var sellNumDouble :Double = mEdt4.text.toString().toDouble() *1000
                     //取得手續折扣
-                    var handPrice : Double = mEditText.text.toString().toInt() * 0.1
+                    var handPrice : Double = mEditText.text.toString().toDouble()
                     //取得手續費率
                     var handRate : Double =  0.001425
 
                     //取得 買入總價錢
                     var buyAllPrcieDoube : Double = (buypriceDouble * buyNumDouble) +(buypriceDouble * buyNumDouble*handPrice*handRate)
                     //取得 賣出總價錢
-                    var sellAllPriceDouble :Double =( sellPirceDouble * sellNumDouble) + ( sellPirceDouble * sellNumDouble*handPrice*handRate)+
+                    var sellAllPriceDouble :Double =( sellPirceDouble * sellNumDouble) - ( sellPirceDouble * sellNumDouble*handPrice*handRate)-
                             ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
 
 

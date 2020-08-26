@@ -36,7 +36,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
 
                     var sellNumDouble :Double = mEdt4.text.toString().toDouble() *1000
                     //取得手續折扣
-                    var handPrice : Double = mEditText.text.toString().toInt() * 0.1
+                    var handPrice : Double = mEditText.text.toString().toDouble()
                     //取得手續費率
                     var handRate : Double =  0.001425
                     var loandMoneyDouble : Double = edt.text.toString().toDouble() * 0.1
