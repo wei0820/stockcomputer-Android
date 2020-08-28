@@ -42,6 +42,7 @@ class MainActivity : Activity(), View.OnClickListener
                 FirebaseDatebaseManager.getFirebaseDatebase(MarqueeTextView)
                 FirebaseDatebaseManager.getBannerData(mXBanner)
 
+
             }
 
 
