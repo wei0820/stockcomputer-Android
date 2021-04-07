@@ -40,37 +40,42 @@ class MarginTradingActivity  : BaseActivity() , View.OnClickListener {
                     //取得手續折扣
                     var handPrice : Double = mEditText.text.toString().toDouble()
                     //取得手續費率
-                    var handRate : Double =  0.001425
-//                    var loandMoneyDouble : Double = edt.text.toString().toDouble() * 0.1
+                    var handMoney : Double = (buypriceDouble * buyNumDouble) * 0.001425
+                    var changePrice : Double =   (buypriceDouble * buyNumDouble)  * 0.003
+                    var borrowPrice : Double  = (buypriceDouble * buyNumDouble)  * 0.0008
+
+                    var guaranteePrice : Int = (buypriceDouble * buyNumDouble).toInt() - handMoney.toInt() - changePrice.toInt() - borrowPrice.toInt()
+
+
 
                     //取得 保證金
-                    var buyAllPrcieDoube : Double = ((buypriceDouble * buyNumDouble)* 0.9) +(buypriceDouble * buyNumDouble*handPrice*handRate)
+                    var buyAllPrcieDoube : Double = ((buypriceDouble * buyNumDouble)* 0.9)
+
                     //取得 賣出總價錢
-                    var sellAllPriceDouble :Double = ( sellPirceDouble * sellNumDouble) - ( sellPirceDouble * sellNumDouble*handPrice*handRate) -
-                            ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
+//                    var sellAllPriceDouble :Double = ( sellPirceDouble * sellNumDouble) - ( sellPirceDouble * sellNumDouble*handPrice*handRate) -
+//                            ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
 
-                    var day : Double = (DateManager.dateDiff(startDate,endDate)/365.00)
+                    var day : Int = (DateManager.dateDiff(startDate,endDate))
 
 
-//                    var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(day)
+                    var  interestPrice :Double =  (((buyAllPrcieDoube + guaranteePrice) * day *0.02)/365 )
 
                     //保證金
 
 
                     mTextView5.text =  Math.round(buyAllPrcieDoube).toString()
-//                    mTextView2.text = Math.round(sellAllPriceDouble - interest).toString()
+                    mTextView.text = Math.round(interestPrice).toString()
 
 
-                    mTextView3.text =  Math.round(sellAllPriceDouble - buyAllPrcieDoube).toString()
-                    mTextView4.text = Math.round(((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
+//                    mTextView3.text =  Math.round(sellAllPriceDouble - buyAllPrcieDoube).toString()
+//                    mTextView4.text = Math.round(((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
                     closeKeybord()
 
                     mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
-//                    mTextView5.text = df.format( Math.round((buypriceDouble *  buyNumDouble) *  loandMoneyDouble))
 
 
 
-//                    mTextView6.text = df.format(interest)
+                    mTextView6.text = guaranteePrice.toString()
 
                 }
 
