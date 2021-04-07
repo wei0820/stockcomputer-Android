@@ -1,5 +1,6 @@
 package com.jackpan.stockcomputer
 
+import Manager.DateManager
 import android.content.Context
 import android.os.Bundle
 import android.view.View
@@ -47,10 +48,10 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
                     var sellAllPriceDouble :Double =( sellPirceDouble * sellNumDouble) + ( sellPirceDouble * sellNumDouble*handPrice*handRate)+
                             ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
 
-//                    var day : Double = (DateManager.dateDiff(startDate,endDate)/365.00)
+                    var day : Double = (DateManager.dateDiff(startDate,endDate)/365.00)
 
 
-                    var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(10)
+                    var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(day)
 
                     mTextView.text = df.format( (buyAllPrcieDoube - ((buypriceDouble *  buyNumDouble) *  loandMoneyDouble)))
                     mTextView2.text = (sellAllPriceDouble - interest).toString()
@@ -58,7 +59,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
                     mTextView4.text = (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
                     closeKeybord()
 
-//                    mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
+                    mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
                     mTextView5.text = df.format( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble)
 
 
@@ -69,38 +70,38 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
 
 
             }
-//            R.id.startbtn ->
-//                SpinnerDatePickerDialogBuilder()
-//                    .context(this)
-//                    .callback { view, year, monthOfYear, dayOfMonth ->
-//                        mStartTextView.text = year.toString()+"-"+(monthOfYear+1).toString()+"-"+
-//                                dayOfMonth.toString()
-//                        startDate =  year.toString()+"-"+monthOfYear.toString()+"-"+
-//                                dayOfMonth.toString()
-//                    }
-//                    .spinnerTheme(R.style.DatePickerSpinner)
-//                    .defaultDate(DateManager.getYear(), DateManager.getMonth(), DateManager.getDay())
-//                    .build()
-//                    .show()
+            R.id.startbtn ->
+                SpinnerDatePickerDialogBuilder()
+                    .context(this)
+                    .callback { view, year, monthOfYear, dayOfMonth ->
+                        mStartTextView.text = year.toString()+"-"+(monthOfYear+1).toString()+"-"+
+                                dayOfMonth.toString()
+                        startDate =  year.toString()+"-"+monthOfYear.toString()+"-"+
+                                dayOfMonth.toString()
+                    }
+                    .spinnerTheme(R.style.DatePickerSpinner)
+                    .defaultDate(DateManager.getYear(), DateManager.getMonth(), DateManager.getDay())
+                    .build()
+                    .show()
 
-//            R.id.endtbtn ->
-//                SpinnerDatePickerDialogBuilder()
-//                        .context(this)
-//                        .callback { view, year, monthOfYear, dayOfMonth ->
-//
-//
-//                            mEndTextView.text = year.toString()+"-"+(monthOfYear+1).toString()+"-"+
-//                                    dayOfMonth.toString()
-//
-//                            endDate = year.toString()+"-"+monthOfYear.toString()+"-"+
-//                                    dayOfMonth.toString()
-//
-//
-//                        }
-//                        .spinnerTheme(R.style.DatePickerSpinner)
-//                        .defaultDate(DateManager.getYear(), DateManager.getMonth(), DateManager.getDay())
-//                        .build()
-//                        .show()
+            R.id.endtbtn ->
+                SpinnerDatePickerDialogBuilder()
+                        .context(this)
+                        .callback { view, year, monthOfYear, dayOfMonth ->
+
+
+                            mEndTextView.text = year.toString()+"-"+(monthOfYear+1).toString()+"-"+
+                                    dayOfMonth.toString()
+
+                            endDate = year.toString()+"-"+monthOfYear.toString()+"-"+
+                                    dayOfMonth.toString()
+
+
+                        }
+                        .spinnerTheme(R.style.DatePickerSpinner)
+                        .defaultDate(DateManager.getYear(), DateManager.getMonth(), DateManager.getDay())
+                        .build()
+                        .show()
         }
 
     }
