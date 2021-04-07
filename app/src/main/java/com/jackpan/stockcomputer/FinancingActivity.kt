@@ -3,6 +3,7 @@ package com.jackpan.stockcomputer
 import Manager.DateManager
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -45,7 +46,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
                     //取得 買入總價錢
                     var buyAllPrcieDoube : Double = (buypriceDouble * buyNumDouble) +(buypriceDouble * buyNumDouble*handPrice*handRate)
                     //取得 賣出總價錢
-                    var sellAllPriceDouble :Double =( sellPirceDouble * sellNumDouble) + ( sellPirceDouble * sellNumDouble*handPrice*handRate)+
+                    var sellAllPriceDouble :Double = ( sellPirceDouble * sellNumDouble) - ( sellPirceDouble * sellNumDouble*handPrice*handRate) -
                             ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
 
                     var day : Double = (DateManager.dateDiff(startDate,endDate)/365.00)
@@ -53,14 +54,16 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
 
                     var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(day)
 
-                    mTextView.text = df.format( (buyAllPrcieDoube - ((buypriceDouble *  buyNumDouble) *  loandMoneyDouble)))
-                    mTextView2.text = (sellAllPriceDouble - interest).toString()
-                    mTextView3.text =  (sellAllPriceDouble - buyAllPrcieDoube).toString()
-                    mTextView4.text = (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
+                    mTextView.text = df.format( Math.round(buyAllPrcieDoube - ((buypriceDouble *  buyNumDouble) *  loandMoneyDouble)))
+                    mTextView2.text = Math.round(sellAllPriceDouble - interest).toString()
+
+
+                    mTextView3.text =  Math.round(sellAllPriceDouble - buyAllPrcieDoube).toString()
+                    mTextView4.text = Math.round(((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
                     closeKeybord()
 
                     mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
-                    mTextView5.text = df.format( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble)
+                    mTextView5.text = df.format( Math.round((buypriceDouble *  buyNumDouble) *  loandMoneyDouble))
 
 
 

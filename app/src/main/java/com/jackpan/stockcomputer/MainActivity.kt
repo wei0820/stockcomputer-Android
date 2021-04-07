@@ -4,9 +4,11 @@ import Manager.FirebaseDatebaseManager
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.RelativeLayout
 import android.widget.Toast
+import com.google.android.gms.ads.AdListener
 
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
@@ -30,9 +32,9 @@ class MainActivity : Activity(), View.OnClickListener
         lateinit var mLayout4: RelativeLayout
         lateinit var mLayout5: RelativeLayout
         lateinit var mLayout6: RelativeLayout
-
-
         var mArray  = arrayListOf<String>()
+
+
             override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_main)
@@ -73,6 +75,10 @@ class MainActivity : Activity(), View.OnClickListener
             mAdView = findViewById(R.id.adView)
             val adRequest = AdRequest.Builder().build()
             mAdView.loadAd(adRequest)
+
+
+
+
         }
     fun setTitleBar(){
         titleBar.setListener { v, action, extra ->
