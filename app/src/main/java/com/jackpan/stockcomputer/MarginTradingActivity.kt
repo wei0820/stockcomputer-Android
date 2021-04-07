@@ -22,7 +22,7 @@ class MarginTradingActivity  : BaseActivity() , View.OnClickListener {
             R.id.button ->{
                 if(mEdt1.text!!.isEmpty() || mEdt2.text!!.isEmpty()||
                     mEdt3.text!!.isEmpty()||mEdt4.text!!.isEmpty()
-                    || mEditText.text!!.isEmpty()||mloandMoney.text!!.isEmpty()){
+                    || mEditText.text!!.isEmpty()){
 
                     setToast("請檢查後再按計算")
 
@@ -41,10 +41,10 @@ class MarginTradingActivity  : BaseActivity() , View.OnClickListener {
                     var handPrice : Double = mEditText.text.toString().toDouble()
                     //取得手續費率
                     var handRate : Double =  0.001425
-                    var loandMoneyDouble : Double = edt.text.toString().toDouble() * 0.1
+//                    var loandMoneyDouble : Double = edt.text.toString().toDouble() * 0.1
 
-                    //取得 買入總價錢
-                    var buyAllPrcieDoube : Double = (buypriceDouble * buyNumDouble) +(buypriceDouble * buyNumDouble*handPrice*handRate)
+                    //取得 保證金
+                    var buyAllPrcieDoube : Double = ((buypriceDouble * buyNumDouble)* 0.9) +(buypriceDouble * buyNumDouble*handPrice*handRate)
                     //取得 賣出總價錢
                     var sellAllPriceDouble :Double = ( sellPirceDouble * sellNumDouble) - ( sellPirceDouble * sellNumDouble*handPrice*handRate) -
                             ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
@@ -52,10 +52,13 @@ class MarginTradingActivity  : BaseActivity() , View.OnClickListener {
                     var day : Double = (DateManager.dateDiff(startDate,endDate)/365.00)
 
 
-                    var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(day)
+//                    var  interest :Double =  ( (buypriceDouble *  buyNumDouble) *  loandMoneyDouble) * 0.0645 *(day)
 
-                    mTextView.text = df.format( Math.round(buyAllPrcieDoube - ((buypriceDouble *  buyNumDouble) *  loandMoneyDouble)))
-                    mTextView2.text = Math.round(sellAllPriceDouble - interest).toString()
+                    //保證金
+
+
+                    mTextView5.text =  Math.round(buyAllPrcieDoube).toString()
+//                    mTextView2.text = Math.round(sellAllPriceDouble - interest).toString()
 
 
                     mTextView3.text =  Math.round(sellAllPriceDouble - buyAllPrcieDoube).toString()
@@ -63,11 +66,11 @@ class MarginTradingActivity  : BaseActivity() , View.OnClickListener {
                     closeKeybord()
 
                     mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
-                    mTextView5.text = df.format( Math.round((buypriceDouble *  buyNumDouble) *  loandMoneyDouble))
+//                    mTextView5.text = df.format( Math.round((buypriceDouble *  buyNumDouble) *  loandMoneyDouble))
 
 
 
-                    mTextView6.text = df.format(interest)
+//                    mTextView6.text = df.format(interest)
 
                 }
 
