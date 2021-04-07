@@ -170,6 +170,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
         mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
+
     }
     fun closeKeybord(){
         val inputManager: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

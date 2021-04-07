@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "778829796218-24b2atbkiucrmg28osdtmlnhicf8m3bt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jackpan.stockcomputer",
+            "certificate_hash": "6392374c3a9bd7135f80e401ea26a5dee45a5961"
+          }
+        },
+        {
           "client_id": "778829796218-3qmano7vcpo5iqedlue35d01151co0b9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

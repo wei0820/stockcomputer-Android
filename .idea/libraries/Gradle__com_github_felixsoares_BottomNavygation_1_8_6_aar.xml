@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.felixsoares:BottomNavygation:1.8.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/874fe8ebc57fe4feaa8c210708496f0a/jetified-BottomNavygation-1.8.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/874fe8ebc57fe4feaa8c210708496f0a/jetified-BottomNavygation-1.8.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/874fe8ebc57fe4feaa8c210708496f0a/jetified-BottomNavygation-1.8.6/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.liusong.android:banner:1.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca9b824557644e1b5839b07cd5717d84/jetified-banner-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca9b824557644e1b5839b07cd5717d84/jetified-banner-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ca9b824557644e1b5839b07cd5717d84/jetified-banner-1.0.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.liusong.android/banner/1.0.0/9835273cd42a171ca103b5bc726a91b36241e823/banner-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.liusong.android/banner/1.0.0/8a47f6ef7dd0fccfbbf6e0d38a36c8d8bd0fac84/banner-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
