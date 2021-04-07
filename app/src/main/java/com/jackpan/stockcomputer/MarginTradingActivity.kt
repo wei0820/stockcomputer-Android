@@ -3,7 +3,6 @@ package com.jackpan.stockcomputer
 import Manager.DateManager
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -13,7 +12,6 @@ import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.libizo.CustomEditText
 import com.tsongkha.spinnerdatepicker.SpinnerDatePickerDialogBuilder
-import kotlinx.android.synthetic.main.activity_financing.*
 import java.text.DecimalFormat
 
 class MarginTradingActivity  : BaseActivity() , View.OnClickListener {
@@ -46,14 +44,12 @@ class MarginTradingActivity  : BaseActivity() , View.OnClickListener {
 
                     var guaranteePrice : Int = (buypriceDouble * buyNumDouble).toInt() - handMoney.toInt() - changePrice.toInt() - borrowPrice.toInt()
 
+                    var returnMoney : Int =  (sellNumDouble * sellPirceDouble).toInt() + (sellNumDouble * sellPirceDouble * 0.001425 * handPrice).toInt()
 
 
                     //取得 保證金
                     var buyAllPrcieDoube : Double = ((buypriceDouble * buyNumDouble)* 0.9)
 
-                    //取得 賣出總價錢
-//                    var sellAllPriceDouble :Double = ( sellPirceDouble * sellNumDouble) - ( sellPirceDouble * sellNumDouble*handPrice*handRate) -
-//                            ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
 
                     var day : Int = (DateManager.dateDiff(startDate,endDate))
 
@@ -67,8 +63,7 @@ class MarginTradingActivity  : BaseActivity() , View.OnClickListener {
                     mTextView.text = Math.round(interestPrice).toString()
 
 
-//                    mTextView3.text =  Math.round(sellAllPriceDouble - buyAllPrcieDoube).toString()
-//                    mTextView4.text = Math.round(((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100).toString() + "%"
+                    mTextView3.text =  returnMoney.toString()
                     closeKeybord()
 
                     mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
