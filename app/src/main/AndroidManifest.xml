@@ -102,10 +102,12 @@
             android:name="firebase_analytics_collection_enabled"
             android:value="false" />
 
-        <activity android:name=".PhoneAuthActivity" /> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7019441527375550~9928677631" /> <!-- Please add below script if you're using SDK v5.0.2 or above -->
+            android:value="ca-app-pub-7019441527375550~9928677631"/>
+
+        <activity android:name=".PhoneAuthActivity" /> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+
 
     </application>
 

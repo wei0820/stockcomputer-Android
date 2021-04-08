@@ -57,16 +57,19 @@ class MarginTradingActivity  : BaseActivity() , View.OnClickListener {
                     var  interestPrice :Double =  (((buyAllPrcieDoube + guaranteePrice) * day *0.02)/365 )
 
                     //保證金
+                    var shouldPayMoney : Int = guaranteePrice - returnMoney + interestPrice.toInt() + buyAllPrcieDoube.toInt()
 
 
                     mTextView5.text =  Math.round(buyAllPrcieDoube).toString()
                     mTextView.text = Math.round(interestPrice).toString()
 
 
-                    mTextView3.text =  returnMoney.toString()
+                    mTextView2.text =  returnMoney.toString()
+                    mTextView3.text = shouldPayMoney.toString()
                     closeKeybord()
 
                     mDateTextView.text = "總天數:" + DateManager.dateDiff(startDate,endDate)
+                    mTextView4.text =  (shouldPayMoney -returnMoney).toString()
 
 
 

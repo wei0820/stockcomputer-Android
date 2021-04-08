@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.wuhenzhizao:titlebar:1.2.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4f60af7cc702e1f8cd507e75ef3e9cff/jetified-titlebar-1.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4f60af7cc702e1f8cd507e75ef3e9cff/jetified-titlebar-1.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4f60af7cc702e1f8cd507e75ef3e9cff/jetified-titlebar-1.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a276af292e134738f2a7222d75546b82/jetified-titlebar-1.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a276af292e134738f2a7222d75546b82/jetified-titlebar-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a276af292e134738f2a7222d75546b82/jetified-titlebar-1.2.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.wuhenzhizao/titlebar/1.2.0/53fb6beff8cdbfd99abc703fcb54e639863a9a21/titlebar-1.2.0-javadoc.jar!/" />

@@ -22,6 +22,7 @@
         titlebar:titleBarHeight="60dp"
         titlebar:centerType="textView"
         titlebar:rightType="textView"
+        app:leftText="會員"
         titlebar:leftType = "textView"/>
 
     <RelativeLayout
@@ -270,6 +271,6 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-7019441527375550/5989432629">
+        ads:adUnitId="ca-app-pub-7019441527375550/9592159821">
     </com.google.android.gms.ads.AdView>
 </RelativeLayout>

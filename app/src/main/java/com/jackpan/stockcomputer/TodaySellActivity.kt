@@ -45,27 +45,13 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
                     var sellAllPriceDouble :Double =( sellPirceDouble * sellNumDouble) - ( sellPirceDouble * sellNumDouble*handPrice*handRate)-
                             ( sellPirceDouble * sellNumDouble*0.003 * 0.5)
 
-
-
                     mTextView.text = df.format(buyAllPrcieDoube)
                     mTextView2.text =df.format(sellAllPriceDouble)
                     mTextView3.text = df.format( (sellAllPriceDouble - buyAllPrcieDoube))
                     mTextView4.text =df.format( (((sellAllPriceDouble - buyAllPrcieDoube)/buyAllPrcieDoube) *100)) + "%"
                     closeKeybord()
-
-
-
-
-
-
-
-
-
                 }
-
-
             }
-
 
         }
     }

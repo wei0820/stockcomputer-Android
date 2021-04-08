@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.drawers:SpinnerDatePicker:2.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d859b1e3b37b72725c474110b8f93cc/jetified-SpinnerDatePicker-2.0.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d859b1e3b37b72725c474110b8f93cc/jetified-SpinnerDatePicker-2.0.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d859b1e3b37b72725c474110b8f93cc/jetified-SpinnerDatePicker-2.0.1/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1789960c36d025bcc03e6a8ce33e675f/jetified-SpinnerDatePicker-2.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1789960c36d025bcc03e6a8ce33e675f/jetified-SpinnerDatePicker-2.0.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1789960c36d025bcc03e6a8ce33e675f/jetified-SpinnerDatePicker-2.0.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.drawers/SpinnerDatePicker/2.0.1/24fe202795aae95c88a0f0ab28e83f11cea6cf92/SpinnerDatePicker-2.0.1-javadoc.jar!/" />

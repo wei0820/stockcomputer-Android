@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.libizo:customedittext:1.0.6@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/34db7f33a93c7428f4a15f1c848a21e7/jetified-customedittext-1.0.6/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/34db7f33a93c7428f4a15f1c848a21e7/jetified-customedittext-1.0.6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/34db7f33a93c7428f4a15f1c848a21e7/jetified-customedittext-1.0.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32d7ac8a8d00e53b5e45f6ff6fa4b9b5/jetified-customedittext-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32d7ac8a8d00e53b5e45f6ff6fa4b9b5/jetified-customedittext-1.0.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32d7ac8a8d00e53b5e45f6ff6fa4b9b5/jetified-customedittext-1.0.6/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.libizo/customedittext/1.0.6/a5c9924c982287563b077fe0145d3a6c2e029c0e/customedittext-1.0.6-javadoc.jar!/" />
