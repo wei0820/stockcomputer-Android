@@ -22,7 +22,7 @@
         titlebar:titleBarHeight="60dp"
         titlebar:centerType="textView"
         titlebar:rightType="textView"
-        app:leftText="會員"
+        app:leftText="會員中心"
         titlebar:leftType = "textView"/>
 
     <RelativeLayout
