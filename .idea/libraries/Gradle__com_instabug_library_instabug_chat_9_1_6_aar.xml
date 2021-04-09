@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.instabug.library:instabug-chat:9.1.6@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ad0c59abbf72742d61790922fa873242/jetified-instabug-chat-9.1.6/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb44fdcadbdef1831e1432531f059c7d/jetified-instabug-chat-9.1.6/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ad0c59abbf72742d61790922fa873242/jetified-instabug-chat-9.1.6/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ad0c59abbf72742d61790922fa873242/jetified-instabug-chat-9.1.6/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ad0c59abbf72742d61790922fa873242/jetified-instabug-chat-9.1.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb44fdcadbdef1831e1432531f059c7d/jetified-instabug-chat-9.1.6/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb44fdcadbdef1831e1432531f059c7d/jetified-instabug-chat-9.1.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb44fdcadbdef1831e1432531f059c7d/jetified-instabug-chat-9.1.6/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instabug.library/instabug-chat/9.1.6/94a418add41ccdd574e13e6623693b8fcd756eb/instabug-chat-9.1.6-javadoc.jar!/" />

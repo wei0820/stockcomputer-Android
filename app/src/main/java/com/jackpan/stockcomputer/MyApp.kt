@@ -5,6 +5,11 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.iid.FirebaseInstanceId
 import com.instabug.library.Instabug
 import com.instabug.library.invocation.InstabugInvocationEvent
+import dagger.hilt.android.HiltAndroidApp
+
+
+@HiltAndroidApp
+
 
 class MyApp : Application() {
     override fun onCreate() {

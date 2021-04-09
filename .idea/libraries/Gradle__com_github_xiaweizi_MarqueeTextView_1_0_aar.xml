@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.xiaweizi:MarqueeTextView:1.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2df98ccfaa8577567e8b91a21dc7ad0c/jetified-MarqueeTextView-1.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2df98ccfaa8577567e8b91a21dc7ad0c/jetified-MarqueeTextView-1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2df98ccfaa8577567e8b91a21dc7ad0c/jetified-MarqueeTextView-1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f57e92d03c56003c87498f0b827bac2/jetified-MarqueeTextView-1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f57e92d03c56003c87498f0b827bac2/jetified-MarqueeTextView-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2f57e92d03c56003c87498f0b827bac2/jetified-MarqueeTextView-1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

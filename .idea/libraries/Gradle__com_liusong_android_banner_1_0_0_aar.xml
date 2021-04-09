@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.liusong.android:banner:1.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3d6df54ffe58b1eb5124f2ce3bc683d1/jetified-banner-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3d6df54ffe58b1eb5124f2ce3bc683d1/jetified-banner-1.0.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3d6df54ffe58b1eb5124f2ce3bc683d1/jetified-banner-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46f5f7a38f28940af5ae8f5ab20ffb4c/jetified-banner-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46f5f7a38f28940af5ae8f5ab20ffb4c/jetified-banner-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46f5f7a38f28940af5ae8f5ab20ffb4c/jetified-banner-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.liusong.android/banner/1.0.0/9835273cd42a171ca103b5bc726a91b36241e823/banner-1.0.0-javadoc.jar!/" />
