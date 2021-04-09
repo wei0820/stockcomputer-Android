@@ -16,6 +16,8 @@ class MemberModel @ViewModelInject constructor(application: Application) : Andro
 
     fun userPhoneLogin() = viewModelScope.launch {
 
+
+
     }
 
 }
