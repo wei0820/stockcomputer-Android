@@ -1,6 +1,7 @@
 package com.jackpan.stockcomputer.member.Model
 import android.app.Activity
 import android.app.Application
+import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
@@ -28,9 +29,13 @@ class MemberModel @ViewModelInject constructor(application: Application) : Andro
             .setActivity(activity)                 // Activity (for callback binding)
             .setCallbacks(object  :PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
                 override fun onVerificationCompleted(p0: PhoneAuthCredential) {
+                    Log.d("Jack",p0.toString())
+                    login.postValue(PhoneLogin("Success"))
                 }
 
                 override fun onVerificationFailed(p0: FirebaseException) {
+                    Log.d("Jack",p0.toString())
+
                 }
 
             })          // OnVerificationStateChangedCallbacks
