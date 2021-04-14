@@ -3,7 +3,6 @@ package com.jackpan.stockcomputer
 import Manager.DateManager
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -141,7 +140,7 @@ class FinancingActivity : BaseActivity() , View.OnClickListener {
         initLayout()
     }
     fun initLayout(){
-        mEdt1 = findViewById(R.id.edt1)
+        mEdt1 = findViewById(R.id.phoneedt)
         mEdt2 = findViewById(R.id.edt2)
         mEdt3 = findViewById(R.id.edt3)
         mEdt4 = findViewById(R.id.edt4)

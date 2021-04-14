@@ -6,7 +6,6 @@ import android.widget.ListView
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
-import com.facebook.internal.Utility.arrayList
 import android.widget.ArrayAdapter
 import android.widget.ListAdapter
 

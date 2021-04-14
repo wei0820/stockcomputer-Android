@@ -61,8 +61,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.wuhenzhizao:titlebar:1.2.0'
     implementation 'com.google.android.gms:play-services-ads:20.0.0'
-    implementation 'com.facebook.android:facebook-android-sdk:4.42.0'
-
     implementation 'com.google.firebase:firebase-database:19.7.0'
 
     implementation 'com.github.xiaweizi:MarqueeTextView:1.0'
@@ -125,5 +123,9 @@ dependencies {
     kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha01'
 
 
+    implementation "com.google.firebase:firebase-auth-ktx:20.0.1"
+
+    // [START gradle_firebase_ui_auth]
+    implementation "com.firebaseui:firebase-ui-auth:7.1.1"
 
 }

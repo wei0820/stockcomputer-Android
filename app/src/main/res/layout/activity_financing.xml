@@ -41,7 +41,7 @@
                         android:textSize="24dp"
                         ></TextView>
                     <com.libizo.CustomEditText
-                        android:id="@+id/edt1"
+                        android:id="@+id/phoneedt"
                         android:layout_marginTop="20dp"
 
                         android:layout_below="@+id/text1"

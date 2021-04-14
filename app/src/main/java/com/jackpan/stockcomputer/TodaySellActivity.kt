@@ -77,7 +77,7 @@ class TodaySellActivity : BaseActivity() , View.OnClickListener {
         initLayout()
     }
     fun initLayout(){
-        mEdt1 = findViewById(R.id.edt1)
+        mEdt1 = findViewById(R.id.phoneedt)
         mEdt2 = findViewById(R.id.edt2)
         mEdt3 = findViewById(R.id.edt3)
         mEdt4 = findViewById(R.id.edt4)
