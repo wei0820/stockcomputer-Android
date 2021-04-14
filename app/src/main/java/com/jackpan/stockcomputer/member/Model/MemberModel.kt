@@ -71,13 +71,9 @@ class MemberModel @ViewModelInject constructor(application: Application) : Andro
             .addOnCompleteListener(activity) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    Log.d("Jack", "signInWithCredential:success")
-
-
                     val user = task.result?.user
                 } else {
                     // Sign in failed, display a message and update the UI
-                    Log.w("Jack", "signInWithCredential:failure", task.exception)
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
                         // The verification code entered was invalid
                     }
