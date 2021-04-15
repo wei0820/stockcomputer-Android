@@ -4,7 +4,6 @@ import android.app.AlertDialog
 
 import android.os.Bundle
 import android.text.InputType
-import android.util.Log
 import android.view.View
 import com.jackpan.stockcomputer.member.Model.MemberModel
 import androidx.activity.viewModels
@@ -20,7 +19,6 @@ class MemberCenterActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     val memberModel : MemberModel by viewModels()
-    var verificationIdString : String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_center)
@@ -31,8 +29,6 @@ class MemberCenterActivity : AppCompatActivity() {
         sendbtn.setOnClickListener {
             if (phoneedt.text!!.isNotEmpty()){
                 var phoneText  = phoneedt.text.toString().replaceFirst("0","+886")
-                Log.d("Jack",phoneText)
-
 
                 memberModel.getPhoneSMScode(auth,phoneText,this)
                 memberModel.apply {

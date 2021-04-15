@@ -8,6 +8,8 @@
     android:id="@+id/member_layout"
     >
     <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
         android:id="@+id/getsmscodelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +55,7 @@
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/sendsmscodelayout"
-        android:visibility="gone"
+        android:visibility="visible"
         android:layout_below="@+id/getsmscodelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16dp"
-            android:text="輸入手機號碼:"
+            android:text="輸入驗證碼:"
             ></TextView>
 
         <com.libizo.CustomEditText
@@ -76,7 +78,7 @@
             android:layout_below="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="請輸入手機號碼"
+            android:hint="請輸入驗證碼"
             android:inputType="numberDecimal"
             app:libIZO_setPrefixTextColor="#FF4081"
             app:libIZO_clearIconTint="#8f1f15"
@@ -86,7 +88,7 @@
             app:libIZO_setCornerRadius="4dp"
             app:libIZO_setStrokeWidth="2dp"/>
         <Button
-            android:text="發送"
+            android:text="認證"
             android:layout_marginLeft="8dp"
             android:id="@+id/sendbtn2"
             android:layout_toRightOf="@id/smsedt"
@@ -98,7 +100,93 @@
 
     </RelativeLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
 
+        android:visibility="gone"
+        android:id="@+id/isloginlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/useridtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
+            android:text="UID:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_uid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="xxxxxxxxxxxxxxxx"
+            app:layout_constraintStart_toEndOf="@+id/useridtext"
+            app:layout_constraintTop_toTopOf="@+id/useridtext" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="創立時間:"
+            app:layout_constraintStart_toStartOf="@id/useridtext"
+            app:layout_constraintTop_toBottomOf="@+id/useridtext" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView28"
+            app:layout_constraintTop_toBottomOf="@+id/user_uid" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="上次登入時間:"
+            app:layout_constraintStart_toStartOf="@+id/textView28"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView30"
+            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+        <CheckBox
+            android:id="@+id/checkdelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="確定該刪除帳號"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.523" />
+
+        <Button
+            android:id="@+id/deletebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="刪除帳號"
+            app:layout_constraintStart_toEndOf="@+id/checkdelete"
+            app:layout_constraintTop_toTopOf="@+id/checkdelete" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </RelativeLayout>

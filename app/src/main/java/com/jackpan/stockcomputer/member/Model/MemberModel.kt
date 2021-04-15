@@ -17,6 +17,9 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import com.jackpan.stockcomputer.Model.DeleteUserData
 import com.jackpan.stockcomputer.Model.UserData
 
 class MemberModel @ViewModelInject constructor(application: Application) : AndroidViewModel(application){
@@ -24,6 +27,7 @@ class MemberModel @ViewModelInject constructor(application: Application) : Andro
     val getSMSCode  = MutableLiveData<GetSMSCode>()
     val useData  = MutableLiveData<UserData>()
     var verificationIdString : String = ""
+    val deleteUserData = MutableLiveData<DeleteUserData>()
 
 
 
@@ -72,6 +76,8 @@ class MemberModel @ViewModelInject constructor(application: Application) : Andro
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     val user = task.result?.user
+
+
                 } else {
                     // Sign in failed, display a message and update the UI
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
@@ -82,6 +88,17 @@ class MemberModel @ViewModelInject constructor(application: Application) : Andro
             }
 
 
+    }
+
+    fun  deleteUser(){
+
+        Firebase.auth.currentUser.delete().addOnCompleteListener {
+            if (it.isSuccessful){
+                deleteUserData.postValue(DeleteUserData(it.isSuccessful))
+            }
+
+
+        }
     }
 
 
