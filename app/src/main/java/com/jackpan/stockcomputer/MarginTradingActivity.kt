@@ -1,6 +1,6 @@
 package com.jackpan.stockcomputer
 
-import Manager.DateManager
+import manager.DateManager
 import android.content.Context
 import android.os.Bundle
 import android.view.View

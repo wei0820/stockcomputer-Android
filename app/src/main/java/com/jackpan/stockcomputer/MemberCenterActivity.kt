@@ -5,11 +5,13 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.text.InputType
 import android.view.View
-import com.jackpan.stockcomputer.member.Model.MemberModel
+import com.jackpan.stockcomputer.member.viewmodel.MemberModel
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import com.google.firebase.auth.FirebaseAuth
+import com.jackpan.stockcomputer.databinding.ActivityMemberCenterBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_member_center.*
 
@@ -17,11 +19,13 @@ import kotlinx.android.synthetic.main.activity_member_center.*
 @AndroidEntryPoint
 class MemberCenterActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-
-    val memberModel : MemberModel by viewModels()
+    private val memberModel : MemberModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_center)
+        val binding = DataBindingUtil.setContentView<ActivityMemberCenterBinding>(this, R.layout.activity_member_center)
+        binding.memberViewModel = memberModel
+        binding.lifecycleOwner = this;
         initLayout()
         auth = FirebaseAuth.getInstance()
         auth.setLanguageCode("zh-TW")
@@ -53,13 +57,10 @@ class MemberCenterActivity : AppCompatActivity() {
                     memberModel.verifyPhoneNumberWithCode(auth,this,smsedt.text.toString())
                     memberModel.also {
                         it.useData.observe(this, Observer {
-
-
+                            getsmscodelayout.visibility = View.GONE
+                            sendsmscodelayout.visibility = View.GONE
+                            isloginlayout.visibility = View.VISIBLE
                         })
-
-
-
-
                     }
 
                 }

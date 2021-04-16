@@ -1,14 +1,12 @@
 package com.jackpan.stockcomputer
 
-import Manager.FirebaseDatebaseManager
+import manager.FirebaseDatebaseManager
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.RelativeLayout
 import android.widget.Toast
-import com.google.android.gms.ads.AdListener
 
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
