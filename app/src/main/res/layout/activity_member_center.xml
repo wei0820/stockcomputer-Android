@@ -151,7 +151,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
-                android:text="TextView"
+                android:text="@{memberViewModel.useData.lastSignInTimestamp}"
+
                 app:layout_constraintStart_toEndOf="@+id/textView28"
                 app:layout_constraintTop_toBottomOf="@+id/user_uid" />
 

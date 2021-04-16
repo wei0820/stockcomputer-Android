@@ -19,6 +19,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.jackpan.stockcomputer.model.DeleteUserData
 import com.jackpan.stockcomputer.model.UserData
+import manager.TimeManager
 
 class MemberModel @ViewModelInject constructor(application: Application) : AndroidViewModel(application){
 
@@ -73,7 +74,7 @@ class MemberModel @ViewModelInject constructor(application: Application) : Andro
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     val user = task.result?.user
-                    var _user = UserData(user?.phoneNumber, user?.metadata?.creationTimestamp, user?.metadata?.lastSignInTimestamp, user?.uid)
+                    var _user = UserData(user?.phoneNumber, TimeManager.getDate(user?.metadata?.creationTimestamp), TimeManager.getDate(user?.metadata?.lastSignInTimestamp), user?.uid)
                     useData.postValue(_user)
 
                 } else {
