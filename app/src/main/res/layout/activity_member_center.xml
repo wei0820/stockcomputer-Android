@@ -6,7 +6,7 @@
     <data>
         <variable
             name="memberViewModel"
-            type="com.jackpan.stockcomputer.member.viewmodel.MemberModel" />
+            type="com.jackpan.stockcomputer.viewmodel.MemberModel" />
 
     </data>
     <RelativeLayout

@@ -5,7 +5,7 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.text.InputType
 import android.view.View
-import com.jackpan.stockcomputer.member.viewmodel.MemberModel
+import com.jackpan.stockcomputer.viewmodel.MemberModel
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil

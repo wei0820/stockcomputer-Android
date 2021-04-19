@@ -1,4 +1,4 @@
-package com.jackpan.stockcomputer.member.viewmodel
+package com.jackpan.stockcomputer.viewmodel
 import android.app.Activity
 import android.app.Application
 import android.util.Log
@@ -39,7 +39,6 @@ class MemberModel @ViewModelInject constructor(application: Application) : Andro
             .setActivity(activity)                 // Activity (for callback binding)
             .setCallbacks(object  :PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
                 override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-                    Log.d("Jack", "onVerificationCompleted:$credential")
 
                 }
 
