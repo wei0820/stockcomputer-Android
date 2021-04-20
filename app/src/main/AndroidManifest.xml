@@ -48,9 +48,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+
             android:name=".MainActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:theme="@style/NoTitle" />
+            android:configChanges="orientation|keyboardHidden" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

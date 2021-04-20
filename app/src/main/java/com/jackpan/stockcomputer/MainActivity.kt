@@ -15,7 +15,7 @@ import com.wuhenzhizao.titlebar.widget.CommonTitleBar
 import com.lw.banner.Banner
 
 
-class MainActivity : Activity(), View.OnClickListener
+class MainActivity : BaseActivity(), View.OnClickListener
     {
 
         lateinit var titleBar : CommonTitleBar

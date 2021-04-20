@@ -1,6 +1,9 @@
 package com.jackpan.stockcomputer;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -18,6 +21,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
 
