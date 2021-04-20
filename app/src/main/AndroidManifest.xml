@@ -20,9 +20,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".StockEpsListActivity"
+            android:label="@string/title_activity_stock_eps_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".MarginTradingActivity"
             android:label="@string/title_activity_margin_trading"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".IncreaseorDecreaseActivity" />
         <activity android:name=".BrokerActivity" />
         <activity android:name=".DealerActivity" />
@@ -77,9 +81,7 @@
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/app_name" />
 
-        <activity android:name=".PhoneAuthActivity" /> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
-
-
+        <activity android:name=".PhoneAuthActivity" />
     </application>
 
 </manifest>
