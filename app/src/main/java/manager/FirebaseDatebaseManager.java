@@ -1,5 +1,6 @@
 package manager;
 
+import android.util.Log;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -26,7 +27,10 @@ public class FirebaseDatebaseManager {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get Post object and use the values to update the UI
+
                 Stockcomupter banner = dataSnapshot.getValue(Stockcomupter.class);
+                Log.d("Jack",dataSnapshot.getValue().toString());
+
                 textView.setText(banner.announcement);
                 textView.startScroll();
                 // ...
@@ -124,6 +128,34 @@ public class FirebaseDatebaseManager {
         Map<String, Object> childUpdates = new HashMap<>();
         childUpdates.put("version",100);
         mDatabase.updateChildren(childUpdates);
+
+    }
+
+    public static void getStockEpsList(){
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("stockepslist");
+        ValueEventListener postListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Get Post object and use the values to update the UI
+                for(DataSnapshot datas: dataSnapshot.getChildren()){
+                    String classnames=datas.getKey();
+                    Log.d("Jack",classnames);
+                    Log.d("Jack",datas.getValue().toString());
+
+
+                }
+
+                // ...
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Getting Post failed, log a message
+                // ...
+            }
+        };
+        mDatabase.addValueEventListener(postListener);
+
 
     }
 

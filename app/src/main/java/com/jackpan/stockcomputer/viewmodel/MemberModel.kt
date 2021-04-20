@@ -1,8 +1,12 @@
 package com.jackpan.stockcomputer.viewmodel
 import android.app.Activity
 import android.app.Application
+import android.hardware.biometrics.BiometricManager
+import android.net.Uri
+import android.os.Build
 import android.util.Log
 import android.widget.Toast
+import androidx.core.hardware.fingerprint.FingerprintManagerCompat
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
@@ -17,6 +21,7 @@ import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
 import com.jackpan.stockcomputer.model.DeleteUserData
 import com.jackpan.stockcomputer.model.UserData
@@ -114,13 +119,12 @@ class MemberModel @ViewModelInject constructor(application: Application, private
     fun checkUserLogin(){
         val user = Firebase.auth.currentUser
         if (user!=null){
-            Log.d("Jack",user.metadata.creationTimestamp.toString())
             useData.postValue(UserData(user?.phoneNumber, TimeManager.getDate(user?.metadata?.creationTimestamp), TimeManager.getDate(user?.metadata?.lastSignInTimestamp), user?.uid))
 
         }
 
-
     }
+
 
 
 
