@@ -34,6 +34,7 @@
 
             <com.libizo.CustomEditText
                 android:layout_marginLeft="8dp"
+                android:text="@={memberViewModel.phoneNumber}"
 
                 android:layout_toRightOf="@id/phone_text"
                 android:id="@+id/phoneedt"
@@ -56,6 +57,7 @@
                 android:layout_toRightOf="@id/phoneedt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{() ->  memberViewModel.getPhoneSMScode(memberViewModel.phoneNumber)}"
 
                 ></Button>
 
@@ -77,10 +79,9 @@
                 android:layout_marginTop="8dp"
                 android:text="輸入驗證碼:"
                 android:textSize="16dp"></TextView>
-
             <com.libizo.CustomEditText
+                android:text="@={memberViewModel.optCode}"
                 android:id="@+id/smsedt"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text1"
@@ -103,6 +104,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_toRightOf="@id/smsedt"
                 android:text="認證"
+                android:onClick="@{() -> memberViewModel.verifyPhoneNumberWithCode(memberViewModel.optCode)}"
 
                 ></Button>
 
@@ -151,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
-                android:text="@{memberViewModel.useData.lastSignInTimestamp}"
+                android:text="@{memberViewModel.useData.creationTimestamp}"
 
                 app:layout_constraintStart_toEndOf="@+id/textView28"
                 app:layout_constraintTop_toBottomOf="@+id/user_uid" />
@@ -166,16 +168,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
             <TextView
+                android:text="@{memberViewModel.useData.lastSignInTimestamp}"
+
                 android:id="@+id/textView31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="32dp"
-                android:text="TextView"
                 app:layout_constraintStart_toEndOf="@+id/textView30"
                 app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
             <CheckBox
+                android:checked="@={memberViewModel.check}"
                 android:id="@+id/checkdelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -187,6 +191,7 @@
                 app:layout_constraintVertical_bias="0.523" />
 
             <Button
+                android:onClick="@{() ->memberViewModel.deleteUser(memberViewModel.check)}"
                 android:id="@+id/deletebtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
