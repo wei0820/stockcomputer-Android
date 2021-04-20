@@ -2,15 +2,17 @@ package manager;
 
 import android.text.format.DateFormat;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class TimeManager {
 
     public static  String getDate(Long time) {
-        Calendar cal = Calendar.getInstance(Locale.TAIWAN);
-        cal.setTimeInMillis(time * 1000);
-        String date = DateFormat.format("yyyy-MM-dd", cal).toString();
-        return date;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date(time);
+        return simpleDateFormat.format(date);
+
     }
 }

@@ -112,13 +112,11 @@ class MemberModel @ViewModelInject constructor(application: Application, private
 
     }
     fun checkUserLogin(){
-
-        if (useData == null){
-            val user = Firebase.auth.currentUser
-         if (user!=null){
+        val user = Firebase.auth.currentUser
+        if (user!=null){
+            Log.d("Jack",user.metadata.creationTimestamp.toString())
             useData.postValue(UserData(user?.phoneNumber, TimeManager.getDate(user?.metadata?.creationTimestamp), TimeManager.getDate(user?.metadata?.lastSignInTimestamp), user?.uid))
 
-        }
         }
 
 
