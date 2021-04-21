@@ -8,6 +8,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
+import com.jackpan.stockcomputer.model.StockEpsListData;
 
 
 import java.util.ArrayList;
@@ -29,7 +31,6 @@ public class FirebaseDatebaseManager {
                 // Get Post object and use the values to update the UI
 
                 Stockcomupter banner = dataSnapshot.getValue(Stockcomupter.class);
-                Log.d("Jack",dataSnapshot.getValue().toString());
 
                 textView.setText(banner.announcement);
                 textView.startScroll();
@@ -54,7 +55,7 @@ public class FirebaseDatebaseManager {
         ValueEventListener postListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                // Get Post object and use the values to update the UI
+                Log.d("Jack", dataSnapshot.getValue().toString());
                 Banner banner = dataSnapshot.getValue(Banner.class);
                 stringArrayList.add(banner.page1);
                 stringArrayList.add(banner.page2);
@@ -137,10 +138,12 @@ public class FirebaseDatebaseManager {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get Post object and use the values to update the UI
+
+
+
                 for(DataSnapshot datas: dataSnapshot.getChildren()){
-                    String classnames=datas.getKey();
-                    Log.d("Jack",classnames);
-                    Log.d("Jack",datas.getValue().toString());
+                    Gson gson = new Gson();
+                    StockEpsListData stockEpsListData = gson.fromJson(datas.getValue().toString(),StockEpsListData.class);
 
 
                 }
