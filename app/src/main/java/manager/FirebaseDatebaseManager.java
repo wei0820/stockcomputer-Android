@@ -144,6 +144,7 @@ public class FirebaseDatebaseManager {
                 for(DataSnapshot datas: dataSnapshot.getChildren()){
                     Gson gson = new Gson();
                     StockEpsListData stockEpsListData = gson.fromJson(datas.getValue().toString(),StockEpsListData.class);
+                    Log.d("Jack",stockEpsListData.rank+","+stockEpsListData.name);
 
 
                 }
