@@ -1,46 +1,50 @@
 package com.jackpan.stockcomputer.model
 
+import com.google.gson.annotations.SerializedName
+
 data class StockEpsListData(
-    var EPS: String = "",
-    var EPSIOD: String = "",
-    var ROA: String = "",
-    var ROAIOD: String = "",
-    var ROE: String = "",
-    var ROEIOD: String = "",
-    var number: String = "",
-    var name: String = "",
-    var deal: String = "",
-    var rank: String = "",
-    var grossprofit: String = "",
-    var grossprofitbillion: String = "",
-    var grossprofitgrowing: String = "",
-    var grossprofitIOD: String = "",
-    var netincome: String = "",
-    var netincomebillion: String = "",
-    var netincomeIOD: String = "",
-    var revenuegrowing: String = "",
-    var financialyear: String = "",
-    var financialscore: String = ""
-/** "EPS" : "183",
-"EPSIOD" : "-27.8",
-"ROA" : "15.1",
-"ROAIOD" : "-4.64",
-"ROE" : "18.4",
-"ROEIOD" : "-5.79",
-"代號" : "3008",
-"名稱" : "大立光",
-"成交" : "3090",
-"排名" : "1",
-"毛利(%)" : "67",
-"毛利(億)" : "375",
-"毛利成長(%)" : "-10.7",
-"毛率增減" : "-2.06",
-"淨利(%)" : "43.8",
-"淨利(億)" : "245",
-"淨利成長(%)" : "-13.2",
-"淨率增減" : "-2.67",
-"營收(億)" : "559",
-"營收成長(%)" : "-7.9",
-"財報年度" : "2020",
-"財報評分" : "85" **/
-)
+    @SerializedName("排名")
+    var rank : String,
+    @SerializedName("代號")
+    var codename : String,
+    @SerializedName("名稱")
+    var name : String,
+    @SerializedName("成交")
+    var deal : String,
+    @SerializedName("財報年度")
+    var financialyear : String,
+    @SerializedName("營收(億)")
+    var revenue : String,
+    @SerializedName("營收成長(%)")
+    var revenuegrowth : String,
+    @SerializedName("毛利(億)")
+    var grossprofitbillion : String,
+    @SerializedName("毛利成長(%)")
+    var grossprofitgrowth : String,
+    @SerializedName("淨利(億)")
+    var netincomebillion : String,
+    @SerializedName("淨利成長(%)")
+    var netincomegrowth : String,
+    @SerializedName("毛利(%)")
+    var grossprofit : String,
+    @SerializedName("毛率增減")
+    var grossprofitiod : String,
+    @SerializedName("淨利(%)")
+    var netincome : String,
+    @SerializedName("淨率增減")
+    var netincomeiod : String,
+    @SerializedName("EPS(元)")
+    var eps : String,
+    @SerializedName("EPS增減(元)")
+    var epsiod : String,
+    @SerializedName("ROE(%)")
+    var roe : String,
+    @SerializedName("ROE增減")
+    var roeiod : String,
+    @SerializedName("ROA(%)")
+    var poa : String,
+    @SerializedName("ROA增減")
+    var poaiod : String,
+    @SerializedName("財報評分")
+    var score : String
+    )
