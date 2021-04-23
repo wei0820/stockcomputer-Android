@@ -12,10 +12,15 @@ import androidx.lifecycle.ViewModel
 import com.jackpan.stockcomputer.databinding.ActivityStockEpsListBinding
 import com.jackpan.stockcomputer.viewmodel.StockEpsListViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import retrofit2.Retrofit
+import javax.inject.Inject
 
 @AndroidEntryPoint
-class StockEpsListActivity : AppCompatActivity() {
+class StockEpsListActivity @Inject constructor(private val myApp: MyApp): AppCompatActivity() {
     val  stockEpsListViewModel  : StockEpsListViewModel by viewModels()
+    @Inject lateinit var retrofit :Retrofit
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +36,6 @@ class StockEpsListActivity : AppCompatActivity() {
     fun initObsever(){
         stockEpsListViewModel.also {
             it.stockEpsList.observe(this, Observer {
-                Log.d("Jack",it.get(0).name)
             })
         }
 

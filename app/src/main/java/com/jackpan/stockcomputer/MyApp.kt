@@ -12,6 +12,7 @@ import dagger.hilt.android.HiltAndroidApp
 
 
 class MyApp : Application() {
+
     override fun onCreate() {
         super.onCreate()
         Instabug.Builder(this, "9e18a84c1cf580bd2975dba47b97c60a")
@@ -21,6 +22,11 @@ class MyApp : Application() {
                 .build();
 
         getFCMToken()
+    }
+
+
+    companion object{
+
     }
 
 

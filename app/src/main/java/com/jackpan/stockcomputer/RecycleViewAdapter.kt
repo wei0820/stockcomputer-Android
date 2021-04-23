@@ -8,13 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Index
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.ArrayList
 import kotlinx.android.synthetic.main.item_recycler.view.*
+import javax.inject.Inject
 
-class RecycleViewAdapter constructor(var item: ArrayList<String>, val context: Context) : RecyclerView.Adapter<RecycleViewAdapter.ViewHolder>() {
+class RecycleViewAdapter constructor(var item: ArrayList<String>) : RecyclerView.Adapter<RecycleViewAdapter.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_recycler, parent, false))
+
+
 
     }
 
@@ -29,7 +34,7 @@ class RecycleViewAdapter constructor(var item: ArrayList<String>, val context: C
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
+        @Inject lateinit var app :MyApp
         val stockname = view.stock_name
         val layout = view.stocklayout
         fun bind(item: String, position: Int) {

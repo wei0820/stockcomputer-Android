@@ -17,7 +17,7 @@ class SelectStockPagectivity : AppCompatActivity() {
         getList()
         recycler_view.layoutManager = LinearLayoutManager(this)
 
-        recycler_view.adapter = RecycleViewAdapter(stockPageList,this)
+        recycler_view.adapter = RecycleViewAdapter(stockPageList)
 
 
     }
