@@ -55,7 +55,6 @@ public class FirebaseDatebaseManager {
         ValueEventListener postListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.d("Jack", dataSnapshot.getValue().toString());
                 Banner banner = dataSnapshot.getValue(Banner.class);
                 stringArrayList.add(banner.page1);
                 stringArrayList.add(banner.page2);
