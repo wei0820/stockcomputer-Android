@@ -27,8 +27,6 @@ class StockEpsListActivity : BaseActivity() {
         setContentView(R.layout.activity_stock_eps_list)
         initObsever()
         stockEpsListViewModel.getStockEpsListData()
-        Log.d("Jack",mData.size.toString())
-
 
     }
 
