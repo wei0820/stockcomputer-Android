@@ -126,4 +126,8 @@ dependencies {
     // [START gradle_firebase_ui_auth]
     implementation "com.firebaseui:firebase-ui-auth:7.1.1"
 
+    implementation "org.jetbrains.anko:anko:0.10.8"
+
+
+
 }

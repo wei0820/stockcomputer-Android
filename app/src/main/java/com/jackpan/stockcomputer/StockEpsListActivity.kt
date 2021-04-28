@@ -9,26 +9,26 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.jackpan.stockcomputer.databinding.ActivityStockEpsListBinding
+import com.jackpan.stockcomputer.model.StockEpsListData
 import com.jackpan.stockcomputer.viewmodel.StockEpsListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Retrofit
 import javax.inject.Inject
+import kotlinx.android.synthetic.main.activity_stock_eps_list.*
 
-@AndroidEntryPoint
-class StockEpsListActivity @Inject constructor(private val myApp: MyApp): AppCompatActivity() {
+class StockEpsListActivity : BaseActivity() {
     val  stockEpsListViewModel  : StockEpsListViewModel by viewModels()
-    @Inject lateinit var retrofit :Retrofit
-
-
+    val  mData = mutableListOf<StockEpsListData>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = DataBindingUtil.setContentView<ActivityStockEpsListBinding>(this, R.layout.activity_stock_eps_list)
-        binding.lifecycleOwner = this
-        binding.stockEpsListViewModel = stockEpsListViewModel
+        setContentView(R.layout.activity_stock_eps_list)
         initObsever()
         stockEpsListViewModel.getStockEpsListData()
+        Log.d("Jack",mData.size.toString())
+
 
     }
 
@@ -36,6 +36,13 @@ class StockEpsListActivity @Inject constructor(private val myApp: MyApp): AppCom
     fun initObsever(){
         stockEpsListViewModel.also {
             it.stockEpsList.observe(this, Observer {
+                it.forEach {
+                    mData.add(it)
+
+                    val adapter = EpsAsapter(this,R.layout.base_recycler,mData)
+                    epsrecycleview.layoutManager = LinearLayoutManager(this)
+                    epsrecycleview.adapter = adapter
+                }
             })
         }
 

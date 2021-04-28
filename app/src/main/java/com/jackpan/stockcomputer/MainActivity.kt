@@ -2,15 +2,12 @@ package com.jackpan.stockcomputer
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.View
+    import android.view.View
 import android.widget.RelativeLayout
 import android.widget.Toast
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.database.FirebaseDatabase
 import com.lw.banner.Banner
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar
 import manager.FirebaseDatebaseManager

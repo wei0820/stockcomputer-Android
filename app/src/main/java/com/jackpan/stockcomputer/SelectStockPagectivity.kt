@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.jackpan.stockcomputer.databinding.ActivityStockEpsListBinding
 import kotlinx.android.synthetic.main.activity_select_stock_pagectivity.*
 import java.util.ArrayList
-class SelectStockPagectivity : AppCompatActivity() {
+class SelectStockPagectivity : BaseActivity() {
     var stockPageList = ArrayList<String>()
 
 
