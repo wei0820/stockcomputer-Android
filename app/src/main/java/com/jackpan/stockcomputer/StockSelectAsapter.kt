@@ -4,7 +4,7 @@ import android.content.Context
 import android.widget.TextView
 import com.jackpan.stockcomputer.model.StockEpsListData
 
-class EpsAsapter (context: Context,layout :Int ,mData :MutableList<StockEpsListData>) :BaseStockAdapter<StockEpsListData>(context,layout,mData){
+class StockSelectAsapter (context: Context, layout :Int, mData :MutableList<StockEpsListData>) :BaseStockAdapter<StockEpsListData>(context,layout,mData){
     override fun convert(holder: BaseHolder, position: Int) {
 
         var rankTextView = holder.getView<TextView>(R.id.stockrank)

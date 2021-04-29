@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_stock_eps_list.*
 class StockEpsListActivity : BaseActivity() {
     val  stockEpsListViewModel  : StockEpsListViewModel by viewModels()
     val  mData = mutableListOf<StockEpsListData>()
-     val adapter = EpsAsapter(this,R.layout.base_recycler,mData)
+     val adapter = StockSelectAsapter(this,R.layout.base_recycler,mData)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +25,7 @@ class StockEpsListActivity : BaseActivity() {
             val petint = Intent(this, StockPageDetailActivity::class.java)
             petint.putExtra("json", Gson().toJson(adapter.mData.get(it)))
             startActivity(petint)
-
-
-
         }
-
-
     }
 
 
