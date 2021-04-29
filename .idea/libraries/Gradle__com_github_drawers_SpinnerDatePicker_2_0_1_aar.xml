@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.drawers:SpinnerDatePicker:2.0.1@aar">
     <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/42b92a5dcabcb487c662ece0fe931849/jetified-SpinnerDatePicker-2.0.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/42b92a5dcabcb487c662ece0fe931849/jetified-SpinnerDatePicker-2.0.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/42b92a5dcabcb487c662ece0fe931849/jetified-SpinnerDatePicker-2.0.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/42b92a5dcabcb487c662ece0fe931849/jetified-SpinnerDatePicker-2.0.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.drawers/SpinnerDatePicker/2.0.1/24fe202795aae95c88a0f0ab28e83f11cea6cf92/SpinnerDatePicker-2.0.1-javadoc.jar!/" />

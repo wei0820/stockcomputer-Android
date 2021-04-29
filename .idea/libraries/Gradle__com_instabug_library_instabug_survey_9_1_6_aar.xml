@@ -4,9 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b30ffbc9dd144689693cb7ecd8c2bf29/jetified-instabug-survey-9.1.6/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b30ffbc9dd144689693cb7ecd8c2bf29/jetified-instabug-survey-9.1.6/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b30ffbc9dd144689693cb7ecd8c2bf29/jetified-instabug-survey-9.1.6/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b30ffbc9dd144689693cb7ecd8c2bf29/jetified-instabug-survey-9.1.6/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b30ffbc9dd144689693cb7ecd8c2bf29/jetified-instabug-survey-9.1.6/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instabug.library/instabug-survey/9.1.6/40789b9e48b557226d6dbd88c3fe0e4a6510dab0/instabug-survey-9.1.6-javadoc.jar!/" />

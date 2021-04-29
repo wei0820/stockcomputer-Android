@@ -18,8 +18,8 @@ abstract class BaseStockAdapter<T>(private val ctx: Context, private val layoutR
     : RecyclerView.Adapter<BaseHolder>() {
 
     // item的单击和长按事件都用Lambda写法代替
-    private lateinit var mListener: (position: Int) -> Unit
-    private lateinit var mLongListener: (position: Int) -> Boolean
+     lateinit var mListener: (position: Int) -> Unit
+     lateinit var mLongListener: (position: Int) -> Boolean
 
     fun setOnItemClickListener(mListener: (position: Int) -> Unit) {
         this.mListener = mListener
@@ -88,8 +88,6 @@ abstract class BaseStockAdapter<T>(private val ctx: Context, private val layoutR
         if (position >= 0 && position < mData.size) {
             mData.remove(mData[position])
             notifyDataSetChanged()
-        } else {
-            Log.d("taonce", "delete item failed, position error!")
         }
     }
 

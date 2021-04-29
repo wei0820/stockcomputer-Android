@@ -10,15 +10,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
-
         <TextView
-            android:id="@+id/stocknumber"
+            android:id="@+id/stockrank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tool:text="排名:" />
 
+
+        <TextView
+            android:layout_marginStart="32dp"
+
+            android:id="@+id/stocknumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/stockrank"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="排名:" />
 
         <TextView
             android:id="@+id/stockname"

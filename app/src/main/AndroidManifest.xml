@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jackpan.stockcomputer">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- Required Permissions -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Optional Permissions. Use for optimize ad performance -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -19,10 +20,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+
+        <activity
+            android:name=".StockPageDetailActivity"
+            android:label="@string/title_activity_stock_page_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SelectStockPagectivity"
             android:label="@string/title_activity_select_stock_pagectivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".StockEpsListActivity"
             android:label="@string/title_activity_stock_eps_list"
