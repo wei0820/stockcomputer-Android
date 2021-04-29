@@ -7,4 +7,13 @@
     android:padding="@dimen/box_inset_layout_padding"
     tools:context=".StockPageDetailActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/detailtext"
+        android:textSize="18dp"
+        ></TextView>
+
+
+
 </LinearLayout>

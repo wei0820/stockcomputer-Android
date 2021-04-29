@@ -2,8 +2,10 @@ package com.jackpan.stockcomputer
 
 import android.os.Bundle
 import android.util.Log
+import kotlinx.android.synthetic.main.activity_stock_page_detail.*
 
 class StockPageDetailActivity : BaseActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,7 +16,10 @@ class StockPageDetailActivity : BaseActivity() {
 
     fun getData(){
         val json = intent.getStringExtra("json")
-        Log.d("Jack",json)
+        detailtext.text = json.substring(1,json.length-1).replace(",","\n")
+            .replace("\"", " ");
+
+
 
     }
 }
