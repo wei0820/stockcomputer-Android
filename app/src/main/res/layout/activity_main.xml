@@ -193,11 +193,13 @@
 
                 </RelativeLayout>
                 <RelativeLayout
+                    android:id="@+id/layout_7"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
                     <TextView
+                        android:text="股票排行榜"
                         android:layout_marginRight="8dp"
                         android:layout_marginLeft="8dp"
                         android:textColor="#000000"

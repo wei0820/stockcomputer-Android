@@ -11,7 +11,7 @@ import com.google.android.gms.ads.MobileAds
 import com.lw.banner.Banner
 import com.wuhenzhizao.titlebar.widget.CommonTitleBar
 import manager.FirebaseDatebaseManager
-
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(), View.OnClickListener {
 
@@ -59,6 +59,8 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         mLayout4.setOnClickListener(this)
         mLayout5.setOnClickListener(this)
         mLayout6.setOnClickListener(this)
+        layout_7.setOnClickListener(this)
+
 
         titleBar = findViewById(R.id.titlebar)
         mXBanner = findViewById(R.id.banner)
@@ -96,10 +98,13 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             ))
             R.id.layout_2 -> startActivity(Intent(this, FinancingActivity::class.java))
             R.id.layout_3 -> startActivity(Intent(this, MarginTradingActivity::class.java))
-            R.id.layout_4 -> startActivity(Intent(this, StockEpsListActivity::class.java))
+            R.id.layout_4 -> ""
             R.id.layout_5 -> startActivity(Intent(this, StockTrackActivity::class.java))
             R.id.layout_6 -> {
 
+            }
+            R.id.layout_7 ->{
+                startActivity(Intent(this, SelectStockPagectivity::class.java))
             }
 
         }
