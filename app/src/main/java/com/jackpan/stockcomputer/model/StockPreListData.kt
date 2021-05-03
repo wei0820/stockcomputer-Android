@@ -20,10 +20,10 @@ public class StockPreListData {
     @SerializedName("昨收") var closedyesterday : String = ""
     @SerializedName("最低") var lowest : String = ""
     @SerializedName("最高") var highest : String = ""
-    @SerializedName("漲跌價") var aa : String = ""
-    @SerializedName("漲跌幅") var aa : String = ""
-    @SerializedName("股價日期") var aa : String = ""
-    @SerializedName("開盤") var aa : String = ""
+    @SerializedName("漲跌價") var risingandfallingprices : String = ""
+    @SerializedName("漲跌幅") var quotechange: String = ""
+    @SerializedName("股價日期") var date : String = ""
+    @SerializedName("開盤") var open : String = ""
 
 
 
