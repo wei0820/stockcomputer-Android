@@ -39,13 +39,13 @@ class RecycleViewAdapter constructor(var item: ArrayList<String>) : RecyclerView
             layout.setOnClickListener {
                 Toast.makeText(it.context, item, Toast.LENGTH_SHORT).show()
                 when (position) {
-                    0 -> it.context.startActivity(Intent(it.context,StockEpsListActivity::class.java))
-                    2 -> it.context.startActivity(Intent(it.context,StockEpsListActivity::class.java))
-                    3 -> it.context.startActivity(Intent(it.context,StockEpsListActivity::class.java))
-                    4 -> it.context.startActivity(Intent(it.context,StockEpsListActivity::class.java))
-                    5 -> it.context.startActivity(Intent(it.context,StockEpsListActivity::class.java))
-                    6 -> it.context.startActivity(Intent(it.context,StockEpsListActivity::class.java))
-                    7 -> it.context.startActivity(Intent(it.context,StockEpsListActivity::class.java))
+                    0 -> ""
+                    2 -> ""
+                    3 ->""
+                    4 -> ""
+                    5 -> ""
+                    6 -> ""
+                    7 -> ""
                     8 -> it.context.startActivity(Intent(it.context,StockEpsListActivity::class.java))
 
                 }

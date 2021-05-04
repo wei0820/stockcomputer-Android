@@ -34,7 +34,6 @@ class StockEpsListActivity : BaseActivity() {
             it.stockEpsList.observe(this, Observer {
                 it.forEach {
                     mData.add(it)
-
                     epsrecycleview.layoutManager = LinearLayoutManager(this)
                     epsrecycleview.adapter = adapter
                 }

@@ -20,15 +20,12 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     lateinit var MarqueeTextView: com.xiaweizi.marquee.MarqueeTextView
     lateinit var mXBanner: Banner
     lateinit var mBottomBar: com.roughike.bottombar.BottomBar
-
     lateinit var mLayout: RelativeLayout
     lateinit var mLayout2: RelativeLayout
     lateinit var mLayout3: RelativeLayout
     lateinit var mLayout4: RelativeLayout
     lateinit var mLayout5: RelativeLayout
     lateinit var mLayout6: RelativeLayout
-    var mArray = arrayListOf<String>()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,10 +35,6 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         setAd()
         FirebaseDatebaseManager.getFirebaseDatebase(MarqueeTextView)
         FirebaseDatebaseManager.getBannerData(mXBanner)
-
-
-
-
 
     }
 
