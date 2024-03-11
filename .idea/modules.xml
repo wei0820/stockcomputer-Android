@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/stockcomputer-Android.iml" filepath="$PROJECT_DIR$/.idea/modules/stockcomputer-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/stockcomputer-Android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/stockcomputer-Android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/stockcomputer-Android.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/stockcomputer-Android.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/stockcomputer-Android.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/stockcomputer-Android.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/stockcomputer-Android.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/stockcomputer-Android.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/bannerview/stockcomputer-Android.bannerview.iml" filepath="$PROJECT_DIR$/.idea/modules/bannerview/stockcomputer-Android.bannerview.iml" />
     </modules>
   </component>

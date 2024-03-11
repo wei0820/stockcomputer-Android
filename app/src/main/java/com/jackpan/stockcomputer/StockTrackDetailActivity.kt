@@ -15,7 +15,7 @@ class StockTrackDetailActivity : BaseActivity() {
     }
 
     fun getData(){
-        var  detail : String = getIntent().getStringExtra("detail")
+        var  detail : String? = getIntent().getStringExtra("detail")
 
         mTextView.text = detail
     }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jackpan.stockcomputer">
+    package="com.jackpan.stockcomputer"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- Required Permissions -->
@@ -13,59 +14,101 @@
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:hardwareAccelerated="true"
         android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
-
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
         <activity
             android:name=".StockPageDetailActivity"
             android:label="@string/title_activity_stock_page_detail"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false"></activity>
         <activity
             android:name=".SelectStockPagectivity"
             android:label="@string/title_activity_select_stock_pagectivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported ="true"></activity>
         <activity
+
             android:name=".StockEpsListActivity"
             android:label="@string/title_activity_stock_eps_list"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported ="true"></activity>
         <activity
+
             android:name=".MarginTradingActivity"
             android:label="@string/title_activity_margin_trading"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".IncreaseorDecreaseActivity" />
-        <activity android:name=".BrokerActivity" />
-        <activity android:name=".DealerActivity" />
-        <activity android:name=".TrustActivity" />
-        <activity android:name=".ForeignInvestorActivity" />
-        <activity android:name=".StockTrackDetailActivity" />
-        <activity android:name=".StockTrackActivity" />
-        <activity android:name=".ThreeActivity" />
-        <activity android:name=".SelectPageActivity" />
-        <activity android:name=".FinancingActivity" />
-        <activity android:name=".TomorrowActivity" />
-        <activity android:name=".TodaySellActivity" />
-        <activity android:name=".MemberCenterActivity" />
-        <activity android:name=".LandPageActivity">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported ="true"></activity>
+
+        <activity
+            android:name=".IncreaseorDecreaseActivity"
+            android:exported ="true"></activity>
+
+        <activity android:name=".BrokerActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported ="true"></activity>
+
+        <activity android:name=".DealerActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported ="true">
+        </activity>
+
+        <activity android:name=".TrustActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported ="true">
+
+        </activity>
+
+        <activity android:name=".ForeignInvestorActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported ="true"></activity>
+
+        <activity android:name=".StockTrackDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported ="true"
+            ></activity>
+
+        <activity android:name=".StockTrackActivity"   android:exported ="true"></activity>
+        <activity android:name=".ThreeActivity"  android:exported ="true"></activity>
+        <activity android:name=".SelectPageActivity"   android:exported ="true"></activity>
+        <activity android:name=".FinancingActivity"   android:exported ="true"></activity>
+        <activity android:name=".TomorrowActivity"   android:exported ="true"></activity>
+        <activity android:name=".TodaySellActivity"  android:exported ="true"></activity>
+
+        <activity android:name=".MemberCenterActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported = "true"></activity>
+
+        <activity android:name=".PhoneAuthActivity"
+            android:exported = "true">
+
+        </activity>
+
+        <activity android:name=".LandPageActivity"
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
+
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported ="true">
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -73,6 +116,7 @@
 
         <service
             android:name=".MyFirebaseMessagingService"
+            android:enabled="false"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -96,7 +140,6 @@
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/app_name" />
 
-        <activity android:name=".PhoneAuthActivity" />
     </application>
 
 </manifest>

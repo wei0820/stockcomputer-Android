@@ -16,7 +16,7 @@ class StockPageDetailActivity : BaseActivity() {
 
     fun getData(){
         val json = intent.getStringExtra("json")
-        detailtext.text = json.substring(1,json.length-1).replace(",","\n")
+        detailtext.text = json!!.substring(1,json!!.length-1).replace(",","\n")
             .replace("\"", " ");
 
 

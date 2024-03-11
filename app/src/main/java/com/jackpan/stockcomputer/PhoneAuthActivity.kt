@@ -346,6 +346,7 @@ class PhoneAuthActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+
     companion object {
         private const val TAG = "PhoneAuthActivity"
         private const val KEY_VERIFY_IN_PROGRESS = "key_verify_in_progress"
